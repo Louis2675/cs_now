@@ -1,14 +1,51 @@
+:root {
+    --bg-color: #fff; /* Couleur de fond de la page */
+    --nav-bg-color: #2C2B30; /* Couleur de fond de la barre de navigation */
+}
+
 * {
     margin: 0;
     padding: 0;
 }
 
-#logo {
-    height: 50px;
+body {
+    background-color: var(--bg-color);
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: 10fr 3fr 1fr 1fr;
+    background-color: var(--nav-bg-color);
+}
+
+.navbar input {
+    margin: auto 150px;
+    padding: 10px 20px 10px 5px;
+    background-color: var(--nav-bg-color);
+    border: none;
+    border-bottom: #fff 1px solid;
+    box-shadow: 0 0 2px #575353;
+}
+
+.navbar input::placeholder {
+    padding-left: 5px;
+    color: #fff;
+}
+
+.navbar input:focus {
+    outline: none;
+    border-bottom: rgb(135, 206, 230) solid 1px;
+}
+
+.navbar-logo {
+    filter: brightness(0) invert(1); /* Inverse les couleurs de l'image */
+    height: 40px;
     margin: 20px;
 }
 
-#banniere {
-    height: 120px;
-    margin: 60px;
+.promotion {
+    font-size: 20px;
+    background-color: #575353;
+    color: #fff;
+    padding: 3px;
 }
