@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#logo {
+    height: 50px;
+    margin: 20px;
+}
+
+#banniere {
+    height: 120px;
+    margin: 60px;
+}
