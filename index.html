@@ -8,16 +8,52 @@
     <title>CS NOW</title>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav>
-        <div class="navbar">
-            <img src="./images/counter-strike-global-offensive-cs-go-logo.png" alt="logo" class="navbar-logo">
-            <input type="search" name="search-bar" id="search" placeholder="Rechercher" required>
-            <a href="#"><img src="./images/shopping-cart.png" alt="cart" class="navbar-logo"></a>
-            <a href="#"><img src="./images/hamburger.png" alt="cart" class="navbar-logo"></a>
+    <marquee behavior="scroll" direction="right" id="promotion">Soldes pour la classe de nsi : -20% sur tous les articles</marquee>
+    <header>
+        <div class="logo">
+            <a href="#"><img src="./images/counter-strike-global-offensive-cs-go-logo.png" alt="main-logo" class="nav-logo"></a>
         </div>
-        <!--Promotion-->
-        <marquee behavior="scroll" direction="left" scrollamount="10" class="promotion">Promotion -10% sur tous les skins</marquee>
-    </nav>
+        <div class="search">
+            <input type="search" name="search-bar" placeholder="Rechercher un skin" id="search-bar">
+        </div>
+        <div class="navbar">
+            <a href="#" id="cart"><img src="./images/shopping-cart.png" alt="cart" class="nav-logo"></a>
+            <div class="hamburger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+        </div>
+    </header>
+    <div class="menu">
+        <details>
+            <summary>Fusils</summary>
+            <a href="#">M4A4</a>
+            <a href="#">M4A1-S</a>
+            <a href="#">AK-47</a>
+            <a href="#">AWP</a>
+        </details>
+        <details>
+            <summary>Pistolets</summary>
+            <a href="#">USP-S</a>
+            <a href="#">Glock-18</a>
+            <a href="#">P250</a>
+            <a href="#">Desert Eagle</a>
+        </details>
+        <details>
+            <summary>Couteaux</summary>
+            <a href="#">Karambit</a>
+            <a href="#">Papillon</a>
+            <a href="#">Bayonette M9</a>
+            <a href="#">Dagues de l'ombre</a>
+        </details>
+        <details>
+            <summary>Mitraillettes</summary>
+            <a href="#">MAC-10</a>
+            <a href="#">P90</a>
+            <a href="#">MP9</a>
+            <a href="#">PP-Bizon</a>
+        </details>
+    </div>
+    <script src="index.js"></script>
 </body>
-</html>
