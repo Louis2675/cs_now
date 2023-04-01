@@ -8,16 +8,23 @@
     <title>CS NOW</title>
 </head>
 <body>
-    <marquee behavior="scroll" direction="right" id="promotion">Soldes pour la classe de nsi : -20% sur tous les articles</marquee>
+    <marquee behavior="scroll" direction="right" id="promotion">Black Friday : profitez d'offres jusqu'à - 70 % (sauf pour les articles de type "Antonin") avec le code : "NSI70"</marquee>
     <header>
         <div class="logo">
-            <a href="#"><img src="./images/counter-strike-global-offensive-cs-go-logo.png" alt="main-logo" class="nav-logo"></a>
+            <a href="index.html"><img src="./images/counter-strike-global-offensive-cs-go-logo.png" alt="main-logo" class="nav-logo"></a>
         </div>
         <div class="search">
-            <input type="search" name="search-bar" placeholder="Rechercher un skin" id="search-bar">
+            <input type="search" name="search-bar" placeholder="Rechercher un skin" autocomplete="off" autocorrect="off" type="text">
+            <div class="loupe">
+                <button><img src="./images/loupe.png" alt="loupe"></button>
+                <div class="tooltip-loupe">Rechercher</div>
+            </div>
         </div>
         <div class="navbar">
-            <a href="#" id="cart"><img src="./images/shopping-cart.png" alt="cart" class="nav-logo"></a>
+            <div class="panier">
+                <a href="#" id="cart"><img src="./images/shopping-cart.png" alt="cart"></a>
+                <div class="tooltip-panier">Panier</div>
+            </div>
             <div class="hamburger">
                 <span class="line"></span>
                 <span class="line"></span>
@@ -26,34 +33,91 @@
         </div>
     </header>
     <div class="menu">
-        <details>
-            <summary>Fusils</summary>
-            <a href="#">M4A4</a>
-            <a href="#">M4A1-S</a>
-            <a href="#">AK-47</a>
-            <a href="#">AWP</a>
-        </details>
-        <details>
-            <summary>Pistolets</summary>
-            <a href="#">USP-S</a>
-            <a href="#">Glock-18</a>
-            <a href="#">P250</a>
-            <a href="#">Desert Eagle</a>
-        </details>
-        <details>
-            <summary>Couteaux</summary>
-            <a href="#">Karambit</a>
-            <a href="#">Papillon</a>
-            <a href="#">Bayonette M9</a>
-            <a href="#">Dagues de l'ombre</a>
-        </details>
-        <details>
-            <summary>Mitraillettes</summary>
-            <a href="#">MAC-10</a>
-            <a href="#">P90</a>
-            <a href="#">MP9</a>
-            <a href="#">PP-Bizon</a>
-        </details>
+        <h1>Fusils</h1>
+        <div class="fusils armes">
+            <div class="m4a4 card">
+                <a href="#">
+                    <h3>M4A4</h3>
+                    <img src="./images/base-weapons/m4a4.png" alt="m4a4">
+                </a>
+            </div>
+            <div class="m4a1-s card">
+                <a href="#">
+                    <h3>M4A1-S</h3>
+                    <img src="./images/base-weapons/m4a1-s.png" alt="m4a1-s">
+                </a>
+            </div>
+            <div class="ak-47 card">
+                <a href="#">
+                    <h3>AK-47</h3>
+                    <img src="./images/base-weapons/ak-47.png" alt="ak-47">
+                </a>
+            </div>
+            <div class="AWP card">
+                <a href="#">
+                    <h3>AWP</h3>
+                    <img src="./images/base-weapons/AWP.png" alt="awp">
+                </a>
+            </div>
+        </div>
+        <h1>Pistolets</h1>
+        <div class="pistolets armes">
+            <div class="usp-s card">
+                <a href="#">
+                    <h3>USP-S</h3>
+                    <img src="./images/base-weapons/usp-s.png" alt="usp-s">
+                </a>
+            </div>
+            <div class="glock-18 card">
+                <a href="#">
+                    <h3>Glock-18</h3>
+                    <img src="./images/base-weapons/glock-18.png" alt="glock-18">
+                </a>
+            </div>
+            <div class="p250 card">
+                <a href="#">
+                    <h3>P250</h3>
+                    <img src="./images/base-weapons/p250.png" alt="p250">
+                </a>
+            </div>
+            <div class="desert-eagle card">
+                <a href="#">
+                    <h3>Desert Eagle</h3>
+                    <img src="./images/base-weapons/desert-eagle.png" alt="desert-eagle">
+                </a>
+            </div>
+        </div>
+        <h1>Couteaux</h1>
+        <div class="pistolets armes">
+            <div class="karambit card">
+                <a href="#">
+                    <h3>★ Karambit</h3>
+                    <img src="./images/base-weapons/karambit.png" alt="karambit">
+                </a>
+            </div>
+            <div class="butterfly card">
+                <a href="#">
+                    <h3>★ Butterfly</h3>
+                    <img src="./images/base-weapons/butterfly.png" alt="butterfly">
+                </a>
+            </div>
+            <div class="bayonnette-m9 card">
+                <a href="#">
+                    <h3>★ Bayonnette M9</h3>
+                    <img src="./images/base-weapons/bayonnette-m9.png" alt="bayonnette-m9">
+                </a>
+            </div>
+            <div class="shadow-daggers card">
+                <a href="#">
+                    <h3>★ Shadow Daggers</h3>
+                    <img src="./images/base-weapons/shadow-daggers.png" alt="shadow-daggers">
+                </a>
+            </div>
+        </div>
     </div>
+    <div class="container">
+        <img src="" alt="">
+    </div>
+
     <script src="index.js"></script>
 </body>

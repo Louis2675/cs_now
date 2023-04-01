@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "Google Sans Regular";
+    font-family: Roboto, Noto, sans-serif;
     box-sizing: border-box;
 }
 
@@ -29,6 +29,89 @@ header {
 .navbar {
     display: flex;
     align-items: center;
+}
+
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+
+.search input {
+    border: solid 2px #aaaa;
+    border-radius: 40px 0 0 40px;
+    padding: 10px 50px 10px 10px;
+    font-family: Roboto, Noto, sans-serif;
+    font-size: 16px;
+}
+
+
+.search input:focus{
+	border-color: inherit;
+    -webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+
+.loupe button {
+    border-radius: 0 40px 40px 0;
+    border: solid 2px #aaaa;
+    border-left: none;
+    padding: 8px 0;
+}
+
+
+.tooltip-loupe {
+    position: absolute;
+    background-color: rgba(110, 110, 110, 0.2);
+    width: auto;
+    padding: 10px;
+    box-shadow: #4d4d4d 2px 1px 1px;
+    color: #333;
+    top: 110px;
+    right: 690px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.loupe:hover .tooltip-loupe {
+    opacity: 1;
+    transition: ease-in-out all 0.2s;
+}
+
+
+.search img {
+    height: 19px;
+    padding: 1px 15px;
+}
+
+
+.panier img {
+    margin: 0 0 0 20px;
+    height: 30px;
+    width: 30px;
+}
+
+
+.tooltip-panier {
+    position: absolute;
+    background-color: rgba(110, 110, 110, 0.2);
+    width: auto;
+    padding: 10px;
+    box-shadow: #4d4d4d 2px 1px 1px;
+    color: #333;
+    top: 105px;
+    right: 75px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.panier:hover .tooltip-panier {
+    opacity: 1;
+    transition: ease-in-out all 0.2s;
 }
 
 
@@ -64,29 +147,64 @@ header {
 
 
 .menu {
+    text-align: center;
     display: none;
 }
 
-.menu details summary{
-    font-size: 1.25rem;
+
+.menu h1 {
+    margin: 30px;
 }
+
+
+.menu .armes {
+    display: flex;
+    justify-content: center;
+}
+
+
+.menu .card {
+    margin: 0 20px;
+    padding: 10px;
+    background-color: #e4e4e4;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, .2);
+    flex-wrap: wrap;
+}
+
+
+.menu .card:hover {
+    transform: translateY(-10px);
+    transition: all 0.1s ease-in-out;
+}
+
+
 .menu a {
+    font-size: 16px;
     color: #333;
     text-decoration: none;
 }
 
-.menu a:hover {
-    color: #333;
-    border-bottom: #333 solid 2px;
+.menu img {
+    width: 200px;
+    height: 150px; 
 }
 
-.menu a:visited {
-    color: #333;
+
+.menu.active {
+    display: block;
+    transform: ease-in 0.5s;
 }
+
+
+.container.hidden {
+    display: none;
+}
+
 
 #promotion {
     background-color: red;
     color: #fff;
-    font-size: 15px;
+    font-size: 16px;
     padding: 5px
 }
