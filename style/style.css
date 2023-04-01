@@ -1,3 +1,8 @@
+:root {
+    --background-footer-color: #334387;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -49,7 +54,7 @@ header {
 
 
 .search input:focus{
-	border-color: inherit;
+	border-color: #333;
     -webkit-box-shadow: none;
 	box-shadow: none;
 }
@@ -60,6 +65,7 @@ header {
     border: solid 2px #aaaa;
     border-left: none;
     padding: 8px 0;
+    cursor: pointer;
 }
 
 
@@ -210,10 +216,17 @@ header {
     padding: 5px
 }
 
+.banner {
+    position: relative;
+    width: 100%;
+    height: 470px;
+}
+
 
 .fond-banner {
     position: absolute;
     margin-top: 20px;
+    margin-bottom: 500px;
     width: 100%;
     height: 500px;
 }
@@ -240,6 +253,7 @@ header {
     font-size: 20px;
     margin-top: 330px;
     margin-left: 120px;
+    cursor: pointer;
 }
 
 
@@ -267,4 +281,74 @@ header {
     width: 30%;
     margin-top: 330px;
     margin-left: 950px;
+}
+
+
+.slider {
+    max-width: 800px;
+    margin-top: 400px;
+    padding: 50px;
+}
+
+
+.img-slider img{
+    max-width: 100%;
+    display: none;
+}
+
+
+.img-slider img.active {
+    display: block;
+    animation: fade O.8s;
+}
+
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.slider-button {
+    width: 100%;
+    height: auto;
+    border: 1px solid #000;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+}
+
+
+.nav-right {
+    font-size: 50px;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+
+.nav-left {
+    font-size: 50px;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+
+footer {
+    background-color: var(--background-footer-color);
+    color: #fff;
+    font-size: 16px;
+    margin-top: 50px;
+    padding: 30px 20px 10px 20px;
+}
+
+
+.footer-icons {
+    filter: brightness(0) invert(1);
+    height: 25px;
+    width: 25px;
+    margin: 0 8px;
 }
