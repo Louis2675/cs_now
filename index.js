@@ -10,7 +10,7 @@ hamburger.onclick = function() { // Au clic sur le menu hamburger
 }
 
 
-const items = document.querySelector('.img-slider');
+const items = document.querySelectorAll('.img-slider > img');
 const nbSlide = items.length;
 const suivant = document.querySelector('.nav-right');
 const precedent = document.querySelector('.nav-left');
@@ -43,7 +43,7 @@ function slidePrecedente(){
     }
 
     items[count].classList.add('active')
-    // console.log(count);
+    console.log(count);
     
 }
 precedent.addEventListener('click', slidePrecedente)
