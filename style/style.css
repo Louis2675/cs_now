@@ -173,7 +173,7 @@ header {
 .menu .card {
     margin: 0 20px;
     padding: 10px;
-    background-color: #efefef;
+    background-color: rgb(235, 234, 232);
     border-radius: 10px;
     box-shadow: 10px 5px 5px rgba(0, 0, 0, .2);
     flex-wrap: wrap;
@@ -235,7 +235,7 @@ header {
 .text-banner {
     position: absolute;
     z-index: 1;
-    color: #fff;
+    color: #000000;
     font-family: Roboto, Noto, sans-serif;
     font-size: 50px;
     margin: 75px;
