@@ -1,8 +1,3 @@
-:root {
-    --background-footer-color: #334387;
-}
-
-
 * {
     margin: 0;
     padding: 0;
@@ -78,6 +73,7 @@ header {
 .tooltip-loupe {
     font-size: 12px;
     position: absolute;
+    z-index: 1;
     display: flex;
     background-color: rgb(220, 220, 220);
     width: auto;
@@ -105,6 +101,7 @@ header {
 .tooltip-panier {
     font-size: 12px;
     position: absolute;
+    z-index: 1;
     display: flex;
     background-color: rgba(220, 220, 220);
     width: auto;
@@ -218,33 +215,15 @@ header {
 
 .banner {
     position: relative;
-    width: 100%;
-    height: 470px;
-}
-
-
-.fond-banner {
-    position: absolute;
-    margin-top: 20px;
-    margin-bottom: 500px;
-    width: 100%;
-    height: 500px;
-}
-
-
-.text-banner {
-    position: absolute;
-    z-index: 1;
-    color: #000000;
-    font-family: Roboto, Noto, sans-serif;
-    font-size: 50px;
-    margin: 75px;
+    z-index: 0;
+    max-width: 1440px;
+    max-height: 500px;
+    margin-top: 5px;
 }
 
 
 .banner button {
     position: absolute;
-    z-index: 1;
     background-color: rgb(255, 217, 0);
     border: solid 2px rgb(255, 217, 0);
     border-radius: 40px;
@@ -257,43 +236,15 @@ header {
 }
 
 
-
-.slider {
-    width: 80%;
-    margin: 0 auto;
-}
-
-
-.AWP-banner {
-    position: absolute;
-    z-index: 1;
-    width: 50%;
-    margin-top: 100px;
-    margin-left: 625px;
-}
-
-
-.karambit-banner {
-    position: absolute;
-    z-index: 1;
-    width: 25%;
-    margin-top: 300px;
-    margin-left: 500px;
-}
-
-
-.asiimov-banner {
-    position: absolute;
-    z-index: 1;
-    width: 30%;
-    margin-top: 330px;
-    margin-left: 950px;
+.banner img {
+    width: 100%;
+    height: 100%;
 }
 
 
 .slider {
-    max-width: 1500px;
-    margin-top: 100px;
+    max-width: 1440px;
+    margin-top: 50px;
     padding: 50px;
 }
 
@@ -308,13 +259,13 @@ header {
 
 .img-slider img.active {
     display: block;
-    animation: fade 0.8s;
+    animation: fade 1s;
 }
 
 
 @keyframes fade {
     from {
-        opacity: 0;
+        opacity: 0.75;
     }
     to {
         opacity: 1;
@@ -322,35 +273,34 @@ header {
 }
 
 
-.slider-button {
-    width: 100%;
-    height: auto;
+.slider-button img {
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    position: absolute;
     display: flex;
-    justify-content: center;
-}
-
-
-.nav-right {
-    font-size: 50px;
-    margin: 15px;
     cursor: pointer;
 }
 
 
-.nav-left {
-    font-size: 50px;
-    margin: 15px;
-    cursor: pointer;
+.button-right {
+    margin-left: 51%;
+}
+
+
+.button-left {
+    margin-left: 47%;
 }
 
 
 footer {
-    background-color: var(--background-footer-color);
+    background-color: rgb(235, 234, 232);
     color: #fff;
     font-size: 16px;
     margin-top: 50px;
     padding: 30px 20px 10px 20px;
 }
+
 
 .footer-info {
     display: flex;
@@ -360,24 +310,13 @@ footer {
 }
 
 
-.arrow-logo {
-    height: 30px;
-    width: 30px;
-}
-
-
-.flip {
-    transform: scaleX(-1);
-}
-
-
-
 .footer-icons {
     filter: brightness(0) invert(1);
     height: 25px;
     width: 25px;
     margin: 0 8px;
 }
+
 
 #payments-logo {
     height: 30px;
