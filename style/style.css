@@ -257,6 +257,13 @@ header {
 }
 
 
+
+.slider {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
 .AWP-banner {
     position: absolute;
     z-index: 1;
@@ -345,10 +352,34 @@ footer {
     padding: 30px 20px 10px 20px;
 }
 
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+.arrow-logo {
+    height: 30px;
+    width: 30px;
+}
+
+
+.flip {
+    transform: scaleX(-1);
+}
+
+
 
 .footer-icons {
     filter: brightness(0) invert(1);
     height: 25px;
     width: 25px;
     margin: 0 8px;
+}
+
+#payments-logo {
+    height: 30px;
+    width: 150px;
 }
