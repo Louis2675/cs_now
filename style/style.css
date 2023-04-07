@@ -384,3 +384,36 @@ footer .regroup p {
     height: 30px;
     width: 150px;
 }
+
+#cookie-popup {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 30px;
+}
+
+.cookie-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cookie-popup span {
+    background-color: rgb(233, 192, 12);
+    box-shadow: 2px 2px rgb(233, 192, 12);
+    border-radius: 5px;
+    padding: 10px;
+    color: #333;
+    cursor: pointer;
+}
+
+#cookie-popup span:hover {
+    background-color: rgb(255, 231, 98);
+}
+
+#cookie-popup.hidden {
+    display: none;
+}
