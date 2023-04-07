@@ -2,11 +2,11 @@ const hamburger = document.querySelector('.hamburger');
 const menu = document.querySelector('.menu');
 const container = document.querySelector('.container');
 
-
+ 
 function toggleClass(element, className) {
-    if (element.classList.contains(className)) {
-        element.classList.remove(className);
-    } else {
+    if (element.classList.contains(className)) {  // Si l'élément contient la classe "className" on la retire
+        element.classList.remove(className); 
+    } else { // Si l'élément ne contient pas la classe "className" on l'ajoute
         element.classList.add(className);
     }
 }

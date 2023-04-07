@@ -301,13 +301,20 @@ header {
     margin-left: 47%;
 }
 
-
-
-.meilleures-ventes .card{
-    background-color: rgb(55, 55, 55) !important;
-    color: #fff !important;
+.meilleures-ventes {
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
 }
 
+.meilleures-ventes .card{
+    background-color: rgb(51, 51, 51);
+}
+
+
+.meilleures-ventes .card h3 {
+    color: #d8d8d8;
+}
 
 .img-mv {
     display: flex;
@@ -315,7 +322,7 @@ header {
     align-items: center;
     text-align: center;
     flex-wrap: wrap;
-    margin-top: 70px;
+    margin: 30px auto 80px auto;
 }
 
 
@@ -324,7 +331,7 @@ footer {
     color: #333;
     font-size: 16px;
     margin-top: 50px;
-    padding: 30px 20px 10px 20px;
+    padding: 40px 20px 10px 20px;
 }
 
 
