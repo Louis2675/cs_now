@@ -3,10 +3,19 @@ const menu = document.querySelector('.menu');
 const container = document.querySelector('.container');
 
 
+function toggleClass(element, className) {
+    if (element.classList.contains(className)) {
+        element.classList.remove(className);
+    } else {
+        element.classList.add(className);
+    }
+}
+
+
 hamburger.onclick = function() { // Au clic sur le menu hamburger
-    hamburger.classList.toggle('active'); // On ajoute ou on retire la classe "active" sur le menu hamburger
-    menu.classList.toggle('active'); // On ajoute ou on retire la classe "active" sur le menu
-    container.classList.toggle('hidden'); // On ajoute ou on retire la classe "active" sur le container
+    toggleClass(hamburger, 'active'); // On ajoute ou on retire la classe "active" sur le menu
+    toggleClass(menu, 'active'); // On ajoute ou on retire la classe "active" sur le menu
+    toggleClass(container, 'active'); // On ajoute ou on retire la classe "active" sur le menu
 }
 
 

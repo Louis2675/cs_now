@@ -50,7 +50,6 @@ header {
 
 .search input:focus{
 	border-color: #333;
-    -webkit-box-shadow: none;
 	box-shadow: none;
 }
 
@@ -167,7 +166,7 @@ header {
 }
 
 
-.menu .card {
+.card {
     margin: 0 20px;
     padding: 10px;
     background-color: rgb(235, 234, 232);
@@ -177,19 +176,19 @@ header {
 }
 
 
-.menu .card:hover {
+.card:hover {
     transform: translateY(-10px);
     transition: all 0.1s ease-in-out;
 }
 
 
-.menu a {
+.card a {
     font-size: 16px;
     color: #333;
     text-decoration: none;
 }
 
-.menu img {
+.card img {
     width: 200px;
     height: 150px; 
 }
@@ -197,7 +196,7 @@ header {
 
 .menu.active {
     display: block;
-    transform: ease-in 0.5s;
+    transition: ease-in 0.5s;
 }
 
 
@@ -214,15 +213,15 @@ header {
 }
 
 .banner {
+    width: 100%;
     position: relative;
     z-index: 0;
-    max-width: 1440px;
     max-height: 500px;
     margin-top: 5px;
 }
 
 
-.banner button {
+.banner a {
     position: absolute;
     background-color: rgb(255, 217, 0);
     border: solid 2px rgb(255, 217, 0);
@@ -233,6 +232,15 @@ header {
     margin-top: 330px;
     margin-left: 120px;
     cursor: pointer;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 1px 1px rgb(255, 217, 0);
+}
+
+
+.banner a:hover {
+    background-color: rgb(255, 231, 98);
+    border: solid 2px rgb(255, 231, 98);
 }
 
 
@@ -243,8 +251,9 @@ header {
 
 
 .slider {
-    max-width: 1440px;
-    margin-top: 50px;
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
     padding: 50px;
 }
 
@@ -293,12 +302,41 @@ header {
 }
 
 
+
+.meilleures-ventes .card{
+    background-color: rgb(55, 55, 55) !important;
+    color: #fff !important;
+}
+
+
+.img-mv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-top: 70px;
+}
+
+
 footer {
     background-color: rgb(235, 234, 232);
-    color: #fff;
+    color: #333;
     font-size: 16px;
     margin-top: 50px;
     padding: 30px 20px 10px 20px;
+}
+
+
+footer a {
+    color: #333;
+    text-decoration: none;
+}
+
+
+footer a:hover {
+    color: #333;
+    border-bottom: 2px solid #333;
 }
 
 
@@ -310,11 +348,28 @@ footer {
 }
 
 
-.footer-icons {
-    filter: brightness(0) invert(1);
+.footer-icons { 
     height: 25px;
     width: 25px;
     margin: 0 8px;
+}
+
+
+footer .regroup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+footer .regroup p {
+    margin: 0 20px;
+    font-size: 1.5rem;
+}
+
+
+.link-block a{
+    margin: 0 20px 0 0;
 }
 
 
