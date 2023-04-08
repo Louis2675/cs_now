@@ -1,0 +1,34 @@
+.container {
+    height: calc(100vh - 136px - 50px - 150px); /* 136px = header height, 50px = h1 height, 150px = footer height, on met la taille du conteneur a 100vh - la somme de la taille du header, h1 et footer pour obtenir un footer toujours en bas de la page*/ 
+}
+
+
+.container h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+table {
+    margin: 70px auto !important;
+    border: 1px solid #000;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+th {
+    background-color: rgb(228, 228, 228);
+}
+
+
+table, th, td {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
