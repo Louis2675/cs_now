@@ -13,3 +13,5 @@ Mettre footer .link-block en display: block; (ne fonctionne pas quand appliqué 
 Faire easter-egg dans la search-bar avec Benichou
 
 Les fichiers vide.html et base.css prenent en compte le footer et le header ils sont donc a mettre de base dans toutes les pages
+
+Faire des liens internes aux pages des sites du haut a la fin etc
