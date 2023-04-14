@@ -8,7 +8,7 @@
     <title>CS NOW</title>
 </head>
 <body>
-    <div class="marquee-container">
+    <div class="marquee-container" id="promotion">
         <p class="marquee">Black Friday : profitez d'offres jusqu'à -70 % (sauf pour Antonin et Kai Tano) avec le code : "NSI70"</p>
     </div>
         <header>
@@ -16,7 +16,7 @@
             <a href="index.html"><img src="./images/counter-strike-global-offensive-cs-go-logo.png" alt="main-logo" class="nav-logo"></a>
         </div>
         <div class="search">
-            <input type="search" name="search-bar" placeholder="Rechercher un skin">
+            <input type="search" name="search-bar" placeholder="Rechercher un skin" id="search" onchange="searchbar()">
             <div class="loupe">
                 <button><img src="./images/icons/loupe.png" alt="loupe"></button>
                 <div class="tooltip-loupe"><b>Rechercher</b></div>
@@ -118,14 +118,17 @@
         </div>
     </div>  
     <div class="container">
+        <div class="scroll-up">
+            <a href="vide.html#promotion"><img src="./images/icons/arrow-up.png" alt="scroll-up"></a>
+        </div>
     </div>
     <footer>
         <div class="top-footer">
             <div class="link-block">
                 <a href="index.html">Page d'accueil</a>
                 <a href="glossaire.html">Glossaire</a>
-                <a href="#">Commissions</a>
-                <a href="#">Notre Equipe</a>
+                <a href="#">Ressources</a>
+                <a href="#">Contact</a>
             </div>  
         </div>
         <div class="bottom-footer">

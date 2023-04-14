@@ -1,5 +1,5 @@
 .container {
-    height: calc(100vh - 136px - 50px - 150px); /* 136px = header height, 50px = h1 height, 150px = footer height, on met la taille du conteneur a 100vh - la somme de la taille du header, h1 et footer pour obtenir un footer toujours en bas de la page*/ 
+    height: calc(100vh - 128px - 50px - 150px); /* 128px = header height, 50px = h1 height, 150px = footer height, on met la taille du conteneur a 100vh - la somme de la taille du header, h1 et footer pour obtenir un footer toujours en bas de la page*/ 
 }
 
 

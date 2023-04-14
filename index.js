@@ -39,6 +39,27 @@ window.onload = () => { // quand la page se charge
 }
 
 
+function searchbar() {
+    var search = document.getElementById("search").value
+
+    let glossaire = ["glossaire", "gloss", "glossa", "glossai", "glossair"]
+    let homepage = ["home", "menu", "homepage", "index"]
+    let ressources = ["ressources", "ressource", "equipe", "équipe", "team"]
+
+    if (glossaire.includes(search.toLowerCase()))
+    window.open("./glossaire.html", "_self")
+
+    if (homepage.includes(search.toLowerCase()))
+    window.open("./index.html", "_self")
+
+    if (ressources.includes(search.toLowerCase()))
+    window.open("./ressources.html", "_self")
+
+    if (search.toLowerCase() === "easter egg")
+    window.open("./easter-egg.html", "_self")
+}
+
+
 const items = document.querySelectorAll('.img-slider > img');
 const nbSlide = items.length;
 const suivant = document.querySelector('.button-right');
@@ -46,7 +67,7 @@ const precedent = document.querySelector('.button-left');
 
 let count = 0;
 
-function slideSuivante(){
+function slideSuivante() {
     items[count].classList.remove('active');
 
     if(count < nbSlide - 1){
@@ -60,7 +81,7 @@ function slideSuivante(){
 suivant.addEventListener('click', slideSuivante)
 
 
-function slidePrecedente(){
+function slidePrecedente() {
     items[count].classList.remove('active');
 
     if(count > 0){

@@ -3,6 +3,7 @@
     padding: 0; /* supprime le padding par défaut */
     font-family: Roboto, Noto, sans-serif; /* définit la police de caractère par défaut */
     box-sizing: border-box; /* change la façon dont les éléments sont mesurés */
+    scroll-behavior: smooth; /* permet de faire un scroll smooth */
 }
 
 
@@ -12,7 +13,7 @@ body {
 
 
 .marquee-container {
-  overflow:hidden; /* cache le texte dépassant (permet d'eviter des scrollbar)*/
+  overflow: hidden; /* cache le texte dépassant (permet d'eviter des scrollbar)*/
   background-color: red;
   color: #fff;
   padding: 3px;
@@ -223,6 +224,23 @@ header {
 
 .container.hidden {
     display: none; /* permet de rendre l'élément invisible quand le menu est actif car on veut cacher le reste de la page (sauf footer et header) */
+}
+
+
+.scroll-up img {
+    position: fixed;
+    width: 50px;
+    right: 30px;
+    bottom: 60px;
+    cursor: pointer;
+    background-color: #d8d8d8;
+    border: solid #d8d8d8;
+    border-radius: 100px;
+}
+
+
+.scroll-up img:hover {
+    background-color: #e8e8e8;
 }
 
 
