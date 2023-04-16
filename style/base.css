@@ -11,6 +11,11 @@ body {
     background-color: #fefefe; /* définit la couleur de fond */
 }
 
+ol, ul {
+    list-style-position: inside; /* permet de mettre les puces à l'intérieur de la liste (utile car sans paddign de base dans la page les points de liste ne se montrent pas et sortent de la page)*/
+    padding: 10px;
+}
+
 
 .marquee-container {
   overflow: hidden; /* cache le texte dépassant (permet d'eviter des scrollbar)*/
@@ -18,6 +23,7 @@ body {
   color: #fff;
   padding: 3px;
 }
+
 
 .marquee {
   min-width:100%;
