@@ -1,6 +1,12 @@
 const hamburger = document.querySelector('.hamburger');
 const menu = document.querySelector('.menu');
 const container = document.querySelector('.container');
+const colorButton = document.querySelector('.color-button');
+const navLogo = document.querySelector('.nav-logo');
+const mvCard = document.querySelectorAll('.mv-card');
+const header = document.querySelector('header');
+const meilleuresVentes = document.querySelector('.meilleures-ventes');
+const sliderButton = document.querySelector('.slider-button');
 
 const mvSearch = Array.prototype.slice.call(mvCard)
 
@@ -62,19 +68,12 @@ function searchbar() {
 }
 
 
-const colorButton = document.querySelector('.color-button');
-const navLogo = document.querySelector('.nav-logo');
-const mvCard = document.querySelectorAll('.mv-card');
-const header = document.querySelector('header');
-const meilleuresVentes = document.querySelector('.meilleures-ventes');
-const sliderButton = document.querySelector('.slider-button');
-
 let i = 0;
 
 colorButton.onclick = () => {
     const colors = ["light", "dark"]
 
-    if (i == colors.length) {
+    if (i + 1 == colors.length) {
         i = 0;
     } else {
         i++;

@@ -4,16 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/home.css">
     <link rel="stylesheet" href="./style/base.css">
     <title>CS NOW</title>
 </head>
 <body>
-    <!-- Haut de la page (marquee + navbar + logos + search + hamburger menu) -->
     <div class="marquee-container" id="promotion">
-        <p class="marquee">Black Friday : profitez d'offres jusqu'à -70 % (sauf pour Antonin, Kai Tano et Alexandre Cuvelier) avec le code : "NSI70"</p>
+        <p class="marquee">Black Friday : profitez d'offres jusqu'à -70 % (sauf pour Antonin et Kai Tano) avec le code : "NSI70"</p>
     </div>
-    <header class="header">
+        <header>
         <div class="logo">
             <a href="index.html"><img src="./images/counter-strike-global-offensive-cs-go-logo.png" alt="main-logo" class="nav-logo"></a>
         </div>
@@ -25,10 +23,6 @@
             </div>
         </div>
         <div class="navbar">
-            <div class="color-button">
-                <img src="./images/icons/mode-sombre.png" alt="mode-sombre">
-                <div class="tooltip-mode-sombre"><b>Mode sombre</b></div>
-            </div>
             <div class="panier">
                 <a href="#" id="cart"><img src="./images/icons/shopping-cart.png" alt="cart"></a>
                 <div class="tooltip-panier"><b>Panier</b></div>
@@ -40,7 +34,6 @@
             </div>
         </div>
     </header>
-    <!-- Menu Hamburger -->
     <div class="menu">
         <h1>Fusils</h1>
         <div class="fusils armes">
@@ -124,71 +117,37 @@
             </div>
         </div>
     </div>  
-    <!-- Contenu de la page (disparait si le hamburger menu est actif) -->
     <div class="container">
         <div class="scroll-up">
-            <a href="index.html#promotion"><img src="./images/icons/arrow-up.png" alt="scroll-up"></a>
+            <a href="vide.html#promotion"><img src="./images/icons/arrow-up.png" alt="scroll-up"></a>
         </div>
-        <div class="banner">
-            <a href="index.html#meilleures-ventes">Découvrez nos offres</a>
-            <img src="./images/banniere.png" alt="banniere">
-        </div>
-        <div class="slider"> 
-            <div class="img-slider">
-                <img src="./images/collection_lore.png" alt="lore" class="active">
-                <img src="./images/collection_asiimov.png" alt="asiimov">
-                <img src="./images/collection_neonoir.png" alt="neo-noir">
-                <img src="./images/collection_gamma.png" alt="gamma-doppler">
-                <img src="./images/collection_fade.png" alt="fade">
-            </div>
-            <div class="slider-button">
-                <div class="button-left"><img src="./images/icons/arrow-left.png" alt="fleche-gauche"></div>
-                <div class="button-right"><img src="./images/icons/arrow-right.png" alt="fleche-droite"></div>
-            </div>
-        </div>
-        <div class="meilleures-ventes" id="meilleures-ventes">
-            <h1>Meilleures Ventes</h1>
-            <div class="img-mv">
-                <div class="card mv-card">
-                    <a href="#">
-                        <h3>USP-S | Kill-Confirmed</h3>
-                        <img src="./images/skins/usp-s/kill_confirmed.png" alt="USPS_K_C">
-                    </a>
+        <div class="formulaire">
+            <form action="">
+                <div>
+                    <label for="Prénom">Prénom</label>
+                    <input type="text">
                 </div>
-                <div class="card mv-card">
-                    <a href="#">
-                        <h3>Desert-Eagle | Blaze</h3>
-                        <img src="./images/skins/desert-eagle/blaze.png" alt="Blaze">
-                    </a>
+                <div>
+                    <label for="Nom">Nom</label>
+                    <input type="text">
                 </div>
-                <div class="card mv-card">
-                    <a href="#">
-                        <h3>AWP | Hyper-Beast</h3>
-                        <img src="./images/skins/awp/hyper-beast.png" alt="AWP-HB">
-                    </a>
+                <div>
+                    <label for="e-mail">Adresse e-mail</label>
+                    <input type="text">
                 </div>
-                <div class="card mv-card">
-                    <a href="#">
-                        <h3>AK-47 | Neon Rider</h3>
-                        <img src="./images/skins/ak-47/neon-rider.png" alt="AK47-NR">
-                    </a>
+                <div>
+                    <label for="Mot de passe">Mot de passe</label>
+                    <input type="password">
                 </div>
-                <div class="card mv-card">
-                    <a href="#">
-                        <h3>Glock-18 | Vogue</h3>
-                        <img src="./images/skins/glock-18/vogue.png" alt="AK47-NR">
-                    </a>
-                </div>
-            </div>
+            </form>
         </div>
     </div>
-    <!-- Footer -->
     <footer>
         <div class="top-footer">
             <div class="link-block">
                 <a href="index.html">Page d'accueil</a>
                 <a href="glossaire.html">Glossaire</a>
-                <a href="ressources.html">Ressources</a>    
+                <a href="ressources.html">Ressources</a>
                 <a href="contact.html">Contact</a>
             </div>  
         </div>
@@ -208,7 +167,6 @@
             </div>
         </div>
     </footer>
-    <!-- Cookie Popup -->
     <div id="cookie-popup" class="hidden">
         <div class="cookie-flex">
             <p>En poursuivant votre navigation sur ce site, vous acceptez l'utilisation de cookies</p>
