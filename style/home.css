@@ -1,3 +1,55 @@
+.header.dark {
+    background-color: rgb(53, 54, 58);
+}
+
+
+.header.dark img:not(.loupe img) {
+    filter: brightness(0) invert(1);
+}
+
+
+.hamburger.dark {
+    filter: brightness(0) invert(1);
+}
+
+
+body.dark {
+    background-color: rgb(53, 54, 58);
+}
+
+.menu.dark h1 {
+    color: #fff;
+}
+
+
+.color-button img {
+    margin: 0 0 0 20px;
+    height: 30px;
+    width: 30px;
+}
+
+
+.tooltip-mode-sombre {
+    font-size: 12px;
+    position: absolute; /* permet de positionner l'élément par rapport à des mesures sur la page, ne bouge jamais */
+    z-index: 1; /* permet de mettre l'élément au dessus des autres */
+    display: flex;
+    background-color: rgba(220, 220, 220);
+    width: auto;
+    padding: 10px;
+    border-radius: 10px;
+    color: #333;
+    opacity: 0; /* permet de rendre l'élément invisible */
+    pointer-events: none; /* permet de ne pas prendre en compte les évènements de la souris sur l'élément */
+}
+
+
+.color-button:hover .tooltip-mode-sombre {
+    opacity: 1; /* permet de rendre l'élément visible (l'element passe de visible a invisible quand on passe sur le bouton)*/
+    transition: ease-in-out all 0.2s; /* permet de faire une transition quand on passe la souris sur le bouton pour faire plus joli lors du changement d'opacite*/
+}
+
+
 .banner {
     width: 100%;
     position: relative;
@@ -78,6 +130,11 @@
 }
 
 
+.slider-button.dark img {
+    filter: brightness(0) invert(1);
+}
+
+
 .button-right {
     margin-left: 51%;
 }
@@ -95,13 +152,28 @@
 }
 
 
+.meilleures-ventes.dark h1 {
+    color: #fff;
+}
+
+
 .meilleures-ventes .card{
     background-color: rgb(51, 51, 51);
 }
 
 
+.mv-card.dark {
+    background-color: #d8d8d8;
+}
+
+
 .meilleures-ventes .card h3 {
     color: #d8d8d8;
+}
+
+
+.mv-card.dark h3 {
+    color: rgb(51, 51, 51);
 }
 
 

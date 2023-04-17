@@ -2,6 +2,8 @@ const hamburger = document.querySelector('.hamburger');
 const menu = document.querySelector('.menu');
 const container = document.querySelector('.container');
 
+const mvSearch = Array.prototype.slice.call(mvCard)
+
  
 function toggleClass(element, className) {
     if (element.classList.contains(className)) {  // Si l'élément contient la classe "className" on la retire
@@ -57,6 +59,59 @@ function searchbar() {
 
     if (search.toLowerCase() === "easter egg")
     window.open("./easter-egg.html", "_self")
+}
+
+
+const colorButton = document.querySelector('.color-button');
+const navLogo = document.querySelector('.nav-logo');
+const mvCard = document.querySelectorAll('.mv-card');
+const header = document.querySelector('header');
+const meilleuresVentes = document.querySelector('.meilleures-ventes');
+const sliderButton = document.querySelector('.slider-button');
+
+let i = 0;
+
+colorButton.onclick = () => {
+    const colors = ["light", "dark"]
+
+    if (i == colors.length) {
+        i = 0;
+    } else {
+        i++;
+    }
+
+    var SelectedColor = colors[i]
+
+    if (SelectedColor === "dark") {
+        // mettre les infos quand le cas est noir
+        navLogo.classList.add("dark")
+        let i = 0;
+        while (i < mvCard.length) {
+            mvCard[i].classList.add("dark");
+            i++;
+        }
+        header.classList.add("dark");
+        document.body.classList.add("dark");
+        meilleuresVentes.classList.add("dark");
+        sliderButton.classList.add("dark");
+        hamburger.classList.add("dark");
+        menu.classList.add("dark");
+
+    } else {
+        // mettre les infos quand le cas est blanc
+        navLogo.classList.remove("dark")
+        let i = 0;
+        while (i < mvCard.length) {
+            mvCard[i].classList.remove("dark");
+            i++;
+        }
+        header.classList.remove("dark")
+        document.body.classList.remove("dark");
+        meilleuresVentes.classList.remove("dark");
+        sliderButton.classList.remove("dark");
+        hamburger.classList.remove("dark");
+        menu.classList.remove("dark");
+    }
 }
 
 
