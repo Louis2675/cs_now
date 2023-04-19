@@ -1,0 +1,407 @@
+* {
+    margin: 0; /* supprime les marges par défaut */
+    padding: 0; /* supprime le padding par défaut */
+    font-family: Roboto, Noto, sans-serif; /* définit la police de caractère par défaut */
+    box-sizing: border-box; /* change la façon dont les éléments sont mesurés */
+    scroll-behavior: smooth; /* permet de faire un scroll smooth */
+    background-image: url("/images/photos_raph/easter-egg.jpg");
+}
+
+
+ol, ul {
+    list-style-position: inside; /* permet de mettre les puces à l'intérieur de la liste (utile car sans paddign de base dans la page les points de liste ne se montrent pas et sortent de la page)*/
+}
+
+
+.marquee-container {
+  overflow: hidden; /* cache le texte dépassant (permet d'eviter des scrollbar)*/
+  background-color: red;
+  color: #fff;
+  padding: 3px;
+}
+
+
+.marquee {
+  min-width:100%;
+  animation: marquee 40s linear infinite; /* animation de défilement doit durer 40s et ne jamais s'arreter */
+}
+
+
+.marquee:hover {
+  animation-play-state: paused; /* si on passe la souris sur le texte, l'animation s'arrete */
+}
+
+
+@keyframes marquee {
+  from{margin-left : -20%;} /* le texte commence à -20% de la largeur de la page permet de faire uen animation qui sort de l'écran */
+    to{margin-left: 120%;} /* le texte finit à 120% de la largeur de la page permet encore une fois de finir hors de l'écran */
+} 
+
+
+header {
+    width: 100%;
+    height: 80px;
+    display: flex; /* permet de mettre les éléments les uns à côté des autres */
+    align-items: center; /* permet de centrer verticalement les éléments */
+    justify-content: space-between; /* permet de mettre un espace entre les éléments */
+}
+
+
+.nav-logo {
+    margin: 0 0 0 20px;
+    height: 40px;
+}
+
+
+.navbar {
+    display: flex; /* permet de mettre les éléments les uns à côté des autres dans la navbar (notamment necessaire pour la search-bar) */
+    align-items: center; /* permet de centrer verticalement les éléments */
+}
+
+
+.search {
+    display: flex; /* permet de mettre les éléments les uns à côté des autres dans la search-bar */
+    align-items: center; /* permet de centrer verticalement les éléments */
+}
+
+
+.search input {
+    border: solid 2px #aaaa; /* définit la couleur et taille de la bordure */
+    border-radius: 40px 0 0 40px; /* définit les coins arrondis */
+    padding: 10px 15px;
+    font-size: 16px; /* définit la taille de la police */
+    width: 500px; /* définit la largeur de la search-bar */
+}
+
+
+.search input:focus{
+	border-color: #333; /* définit la couleur de la bordure quand on clique dedans */
+}
+
+
+.loupe button {
+    border-radius: 0 40px 40px 0; /* définit les coins arrondis */
+    border: solid 2px #aaaa; /* définit la couleur et taille de la bordure */
+    border-left: none; /* supprime la bordure gauche pour que les coins arrondis soient bien visibles et que ca "matche" avec l'autre partie de la search-bar */
+    padding: 8px 0;
+    cursor: pointer; /* change le curseur quand on passe la souris sur le bouton */
+}
+
+
+.search img {
+    height: 19.5px;
+    padding: 1px 15px;
+}
+
+
+.tooltip-loupe {
+    font-size: 12px;
+    position: absolute; /* permet de positionner l'élément par rapport à des mesures sur la page, ne bouge jamais */
+    z-index: 1; /* permet de mettre l'élément au dessus des autres */
+    display: flex;
+    background-color: rgb(220, 220, 220);
+    width: auto;
+    padding: 10px;
+    border-radius: 10px;
+    color: #333;
+    opacity: 0; /* permet de rendre l'élément invisible */
+    pointer-events: none; /* permet de ne pas prendre en compte les évènements de la souris sur l'élément */
+}
+
+
+.loupe:hover .tooltip-loupe {
+    opacity: 1; /* permet de rendre l'élément visible (l'element passe de visible a invisible quand on passe sur le bouton)*/
+    transition: ease-in-out all 0.2s; /* permet de faire une transition quand on passe la souris sur le bouton pour faire plus joli lors du changement d'opacite*/
+}
+
+
+.panier img {
+    margin: 0 0 0 20px;
+    height: 30px;
+    width: 30px;
+}
+
+
+.tooltip-panier {
+    font-size: 12px;
+    position: absolute; /* permet de positionner l'élément par rapport à des mesures sur la page, ne bouge jamais */
+    z-index: 1; /* permet de mettre l'élément au dessus des autres */
+    display: flex;
+    background-color: rgba(220, 220, 220);
+    width: auto;
+    padding: 10px;
+    border-radius: 10px;
+    color: #333;
+    opacity: 0; /* permet de rendre l'élément invisible */
+    pointer-events: none; /* permet de ne pas prendre en compte les évènements de la souris sur l'élément */
+}
+
+
+.panier:hover .tooltip-panier {
+    opacity: 1; /* permet de rendre l'élément visible (l'element passe de visible a invisible quand on passe sur le bouton)*/
+    transition: ease-in-out all 0.2s; /* permet de faire une transition quand on passe la souris sur le bouton pour faire plus joli lors du changement d'opacite*/
+}
+
+
+.hamburger {
+    cursor: pointer; /* change le curseur quand on passe la souris sur le bouton */
+}
+
+
+.hamburger .line {
+    display: block; /* permet de mettre les éléments les uns en dessous des autres */
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 30px;
+}
+
+
+.hamburger.active .line:nth-child(2) {
+    opacity: 0; /* permet de rendre l'élément invisible pour qu'il ne reste que deux elements (les deux qui vont faire la croix)*/
+}
+
+
+.hamburger.active .line:nth-child(1) {
+    transform: translateY(8px) rotate(135deg); /* permet de faire une rotation de 135 degres et de descendre l'element de 8px la barre se met en diagonale pour former la croix */
+    transition: all 0.3s ease-in-out; /* permet de faire une transition pour faire plus joli lors du changement de position */
+}
+
+
+.hamburger.active .line:nth-child(3) {
+    transform: translateY(-10px) rotate(-135deg); /* permet de faire une rotation de -135 degres et de monter l'element de 10px la barre se met en diagonale pour former la croix */
+    transition: all 0.3s ease-in-out; /* permet de faire une transition pour faire plus joli lors du changement de position */
+}
+
+
+.menu {
+    text-align: center; /* permet de centrer horizontalement le texte */
+    display: none; /* permet de rendre l'élément invisible */
+}
+
+
+.menu h1 {
+    margin: 30px;
+}
+
+
+.menu .armes {
+    display: flex; /* permet de mettre les éléments les uns à côté des autres */
+    justify-content: center; /* permet de centrer horizontalement les éléments */
+}
+
+
+.card {
+    margin: 0 20px; 
+    padding: 10px;
+    background-color: rgb(235, 234, 232);
+    border-radius: 10px; /* définit les coins arrondis */
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, .2); /* permet d'ajouter une ombre à l'élément */
+    flex-wrap: wrap; /* permet de mettre les éléments les uns en dessous des autres quand la fenetre devient trop petite */
+}
+
+
+.card:hover {
+    transform: translateY(-10px); /* permet de faire une translation de 10px vers le haut quand on passe la souris sur l'élément */
+    transition: all 0.1s ease-in-out; /* permet de faire une transition pour que l'utilisateur puisse bien voir sur quel element il se trouve */
+}
+
+
+.card a {
+    font-size: 16px;
+    color: #333; /* permet de changer la couleur du texte */
+    text-decoration: none; /* permet de retirer le soulignement du texte */
+}
+
+.card img {
+    width: 200px;
+    height: 150px; 
+}
+
+
+.menu.active {
+    display: block; /* quand le menu est actif, on affiche le menu */
+}
+
+
+.container.hidden {
+    display: none; /* permet de rendre l'élément invisible quand le menu est actif car on veut cacher le reste de la page (sauf footer et header) */
+}
+
+
+.scroll-up img {
+    position: fixed;
+    width: 50px;
+    right: 30px;
+    bottom: 60px;
+    cursor: pointer;
+    background-color: #d8d8d8;
+    border: solid #d8d8d8;
+    border-radius: 100px;
+}
+
+
+.scroll-up img:hover {
+    background-color: #e8e8e8;
+}
+
+
+footer {
+    background-color: rgb(235, 234, 232);
+    color: #333;
+    font-size: 16px;
+    margin-top: 50px;
+    padding: 40px 20px 10px 20px;
+}
+
+
+footer a {
+    color: #333;
+    text-decoration: none; /* permet de retirer le soulignement du texte */
+}
+
+
+footer a:hover {
+    color: #333;
+    border-bottom: 2px solid #333; /* permet de mettre un soulignement au texte quand on passe la souris dessus */
+}
+
+
+.footer-info {
+    display: flex; /* permet de mettre les éléments les uns à côté des autres */
+    justify-content: space-between; /* permet de mettre un espace entre les éléments */
+    align-items: center; /* permet de centrer verticalement les éléments */
+    margin-top: 20px;
+}
+
+
+.footer-icons { 
+    height: 25px;
+    width: 25px;
+    margin: 0 8px;
+}
+
+
+footer .regroup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+footer .regroup p {
+    margin: 0 20px;
+    font-size: 1.5rem;
+}
+
+
+footer .socials img:hover {
+    transform: scale(1.2); /* permet d'agrandir les icones quand l'utilisateur passe la souris dessus */
+    transition: all 0.1s ease-in-out; /* permet de faire une transition pour que l'utilisateur puisse bien voir sur quel element il se trouve */
+}
+
+
+.link-block a {
+    margin: 0 20px 0 0;
+}
+
+
+#payments-logo {
+    height: 25px;
+    width: 30px;
+}
+
+
+#cookie-popup {
+    position: fixed; /* permet de fixer l'élément en bas de la page */
+    bottom: 0; /* permet de fixer l'élément en bas de la page */
+    left: 0; /* permet de fixer l'élément à gauche de la page */
+    width: 100%; /* permet de prendre toute la largeur de la page */
+    background-color: #333;
+    color: #fff;
+    padding: 30px;
+}
+
+
+.cookie-flex {
+    display: flex; /* permet de mettre les éléments les uns à côté des autres */
+    justify-content: space-between; /* permet de mettre un espace entre les éléments */
+    align-items: center; /* permet de centrer verticalement les éléments */
+}
+
+
+#cookie-popup span {
+    background-color: rgb(233, 192, 12);
+    box-shadow: 2px 2px rgb(233, 192, 12);
+    border-radius: 5px;
+    padding: 10px;
+    color: #333;
+    cursor: pointer;
+}
+
+
+#cookie-popup span:hover {
+    background-color: rgb(255, 231, 98); /* permet de changer la couleur de fond quand on passe la souris dessus */
+}
+
+
+#cookie-popup.hidden {
+    display: none; /* permet de rendre l'élément invisible quand l'utilisateur a deja accepte (en fonction du LocalStorage) */
+}
+
+
+.slider-eg {
+    width: 80%;
+    margin: auto;
+    padding: 50px;
+}
+
+
+.img-slider-eg img{
+    max-width: 100%;
+    max-height: 500px;
+    border-radius: 40px;
+    margin-left: 33%;
+    display: none;
+}
+
+
+.img-slider-eg img.active {
+    display: block;
+    animation: fade 1s;
+}
+
+
+@keyframes fade {
+    from {
+        opacity: 0.75;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.slider-button-eg img {
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    position: absolute;
+    display: flex;
+    cursor: pointer;
+}
+
+
+.slider-button-eg.dark img {
+    filter: brightness(0) invert(1);
+}
+
+
+.button-right-eg {
+    margin-left: 51%;
+}
+
+
+.button-left-eg {
+    margin-left: 47%;
+}

@@ -82,23 +82,23 @@ window.onload = () => { // quand la page se charge
 
 
 function searchbar() {
-    var search = document.getElementById("search").value
+    var search = document.getElementById('search').value
 
-    let glossaire = ["glossaire", "gloss", "glossa", "glossai", "glossair"]
-    let homepage = ["home", "menu", "homepage", "index"]
-    let ressources = ["ressources", "ressource", "equipe", "équipe", "team"]
+    let glossaire = ['glossaire', 'gloss', 'glossa', 'glossai', 'glossair']
+    let homepage = ['home', 'menu', 'homepage', 'index']
+    let ressources = ['ressources', 'ressource', 'equipe', 'équipe', 'team']
 
     if (glossaire.includes(search.toLowerCase()))
-    window.open("./glossaire.html", "_self")
+    window.open('./glossaire.html', '_self')
 
     if (homepage.includes(search.toLowerCase()))
-    window.open("./index.html", "_self")
+    window.open('./index.html', '_self')
 
     if (ressources.includes(search.toLowerCase()))
-    window.open("./ressources.html", "_self")
+    window.open('./ressources.html', '_self')
 
     if (search.toLowerCase() === "easter egg")
-    window.open("./easter-egg.html", "_self")
+    window.open('./easter-egg.html', '_self')
 }
 
 
@@ -118,13 +118,15 @@ try {
 
 
 const items = document.querySelectorAll('.img-slider > img');
+const itemseg = document.querySelectorAll('.img-slider-eg > img');
 const nbSlide = items.length;
+const nbSlideeg = itemseg.length;
 const suivant = document.querySelector('.button-right');
 const precedent = document.querySelector('.button-left');
-
+const suivanteg = document.querySelector('.button-right-eg');
+const precedenteg = document.querySelector('.button-left-eg');
 
 let count = 0;
-
 
 function slideSuivante() {
     items[count].classList.remove('active');
@@ -139,9 +141,8 @@ function slideSuivante() {
 }
 
 try {
-    suivant.addEventListener('click', slideSuivante)
+    suivant.addEventListener('click', slideSuivante);
 } catch (error) {}
-
 
 function slidePrecedente() {
     items[count].classList.remove('active');
@@ -156,8 +157,41 @@ function slidePrecedente() {
 }
 
 try {
-    precedent.addEventListener('click', slidePrecedente)
+    precedent.addEventListener('click', slidePrecedente);
 } catch (error) {}
+
+function slideSuivanteeg() {
+    itemseg[count].classList.remove('active');
+
+    if(count < nbSlideeg - 1){
+        count++;
+    } else {
+        count = 0;
+    }
+
+    itemseg[count].classList.add('active')
+}
+
+try {
+    suivanteg.addEventListener('click', slideSuivanteeg);
+} catch (error) {}
+
+function slidePrecedenteeg() {
+    itemseg[count].classList.remove('active');
+
+    if(count > 0){
+        count--;
+    } else {
+        count = nbSlideeg - 1;
+    }
+
+    itemseg[count].classList.add('active')
+}
+
+try {
+    precedenteg.addEventListener('click', slidePrecedenteeg);
+} catch (error) {}
+
 
 let i = 0;
 
@@ -171,7 +205,7 @@ try {
             i++;
         }
 
-        var SelectedColor = colors[i]
+            var SelectedColor = colors[i]
 
         if (SelectedColor === "dark") {
             // mettre les infos quand le cas est noir
