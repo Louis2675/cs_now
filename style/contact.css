@@ -1,0 +1,49 @@
+.register-form {
+    width: 40%;
+    margin: 100px auto;
+}
+
+
+.register-form h2 {
+    margin: 20px 0;
+}
+
+
+.register-form form {
+    display: grid;
+    text-align: center;
+    padding: 20px;
+    border: solid 1px #4a4a4a;
+    border-radius: 10px;
+    box-shadow: 3px 3px #585858;
+}
+
+
+.register-form label, input {
+    margin: 10px 0;
+}
+
+
+.register-form input {
+    padding: 10px;
+}
+
+
+.register-form span {
+    color: red;
+}
+
+
+.register-form input:focus {
+    outline-color: rgb(47, 137, 211);
+}
+
+.promo-consent label{
+    font-size: 15px;
+    font-style: italic;
+}
+
+#required-text {
+    text-align: end;
+    padding: 12px;
+}
