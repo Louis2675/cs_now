@@ -10,7 +10,7 @@ const sliderButton = document.querySelector('.slider-button');
 
 const mvSearch = Array.prototype.slice.call(mvCard)
 
- 
+
 function toggleClass(element, className) {
     if (element.classList.contains(className)) {  // Si l'élément contient la classe "className" on la retire
         element.classList.remove(className); 
@@ -36,7 +36,41 @@ const saveToStorage = () => storageType.setItem(consentPropertyName, true); // o
 const cookiePopup = document.querySelector('#cookie-popup'); // on récupère le popup
 const cookieAccept = document.querySelector('#cookie-accept'); // on récupère le bouton d'acceptation
 
+
+const fname = document.querySelector('#fname');
+const lname = document.querySelector('#lname');
+const submitButton = document.querySelector('#submit-button');
+const welcomeClose = document.querySelector('#welcome-close');
+
+const welcomePopup = document.querySelector('#welcome-popup');
+const welcomeUser = document.querySelector('#welcome-user');
+
+
 window.onload = () => { // quand la page se charge
+    
+    let shouldShowWelcomePopup = sessionStorage.getItem('shouldShowWelcomePopup');
+
+    if (sessionStorage.getItem('shouldShowWelcomePopup') == null) {
+        sessionStorage.setItem('shouldShowWelcomePopup', true);
+    }
+
+    if (shouldShowWelcomePopup == "true") {
+
+        welcomePopup.classList.remove('hidden');
+
+        if (localStorage.getItem('fname') != null && localStorage.getItem('lname') != null ) {
+            welcomeUser.innerText = "Bonjour " + localStorage.getItem('fname') + " " + localStorage.getItem('lname') + ", bienvenue sur CSNOW !";
+        } else {
+            welcomeUser.innerText = "Bonjour, bienvenue sur CSNOW ! Pensez a vous inscrire sur la page contact pour profiter de toutes les fonctionnalités !";
+        }
+
+        welcomeClose.onclick = () => {
+            sessionStorage.setItem('shouldShowWelcomePopup', false);
+            welcomePopup.classList.add('hidden');
+        }
+
+    } else console.log("Welcome popup already shown");
+
     if (shouldShowPopup(storageType)) { // si on doit afficher le popup
         cookiePopup.classList.remove('hidden'); // on l'affiche
         cookieAccept.onclick = () => {
@@ -68,50 +102,19 @@ function searchbar() {
 }
 
 
-let i = 0;
+try {
+    submitButton.onclick = () => {
+        if (!(fname.value == null && lname.value == null)) {
 
-colorButton.onclick = () => {
-    const colors = ["light", "dark"]
-
-    if (i + 1 == colors.length) {
-        i = 0;
-    } else {
-        i++;
-    }
-
-    var SelectedColor = colors[i]
-
-    if (SelectedColor === "dark") {
-        // mettre les infos quand le cas est noir
-        navLogo.classList.add("dark")
-        let i = 0;
-        while (i < mvCard.length) {
-            mvCard[i].classList.add("dark");
-            i++;
+        const fnameText = fname.value;
+        const lnameText = lname.value;
+    
+        localStorage.setItem('fname', fnameText);
+        localStorage.setItem('lname', lnameText);
+        
         }
-        header.classList.add("dark");
-        document.body.classList.add("dark");
-        meilleuresVentes.classList.add("dark");
-        sliderButton.classList.add("dark");
-        hamburger.classList.add("dark");
-        menu.classList.add("dark");
-
-    } else {
-        // mettre les infos quand le cas est blanc
-        navLogo.classList.remove("dark")
-        let i = 0;
-        while (i < mvCard.length) {
-            mvCard[i].classList.remove("dark");
-            i++;
-        }
-        header.classList.remove("dark")
-        document.body.classList.remove("dark");
-        meilleuresVentes.classList.remove("dark");
-        sliderButton.classList.remove("dark");
-        hamburger.classList.remove("dark");
-        menu.classList.remove("dark");
     }
-}
+} catch (error) {} 
 
 
 const items = document.querySelectorAll('.img-slider > img');
@@ -119,7 +122,9 @@ const nbSlide = items.length;
 const suivant = document.querySelector('.button-right');
 const precedent = document.querySelector('.button-left');
 
+
 let count = 0;
+
 
 function slideSuivante() {
     items[count].classList.remove('active');
@@ -132,7 +137,10 @@ function slideSuivante() {
 
     items[count].classList.add('active')
 }
-suivant.addEventListener('click', slideSuivante)
+
+try {
+    suivant.addEventListener('click', slideSuivante)
+} catch (error) {}
 
 
 function slidePrecedente() {
@@ -146,4 +154,54 @@ function slidePrecedente() {
 
     items[count].classList.add('active')
 }
-precedent.addEventListener('click', slidePrecedente)
+
+try {
+    precedent.addEventListener('click', slidePrecedente)
+} catch (error) {}
+
+let i = 0;
+
+try {
+    colorButton.onclick = () => {
+        const colors = ["light", "dark"]
+
+        if (i + 1 == colors.length) {
+            i = 0;
+        } else {
+            i++;
+        }
+
+        var SelectedColor = colors[i]
+
+        if (SelectedColor === "dark") {
+            // mettre les infos quand le cas est noir
+            navLogo.classList.add("dark")
+            let i = 0;
+            while (i < mvCard.length) {
+                mvCard[i].classList.add("dark");
+                i++;
+            }
+            header.classList.add("dark");
+            document.body.classList.add("dark");
+            meilleuresVentes.classList.add("dark");
+            sliderButton.classList.add("dark");
+            hamburger.classList.add("dark");
+            menu.classList.add("dark");
+
+        } else {
+            // mettre les infos quand le cas est blanc
+            navLogo.classList.remove("dark")
+            let i = 0;
+            while (i < mvCard.length) {
+                mvCard[i].classList.remove("dark");
+                i++;
+            }
+            header.classList.remove("dark")
+            document.body.classList.remove("dark");
+            meilleuresVentes.classList.remove("dark");
+            sliderButton.classList.remove("dark");
+            hamburger.classList.remove("dark");
+            menu.classList.remove("dark");
+        }
+    }
+} catch (error) {}

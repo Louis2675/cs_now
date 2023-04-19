@@ -186,3 +186,38 @@ body.dark {
     flex-wrap: wrap;
     margin: 30px auto 80px auto;
 }
+
+
+#welcome-popup {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    max-width: 50%;
+    justify-content: space-between;
+    padding: 50px;
+    top: 70vh;
+    left: auto;
+    position: fixed;
+    background-color: #333;
+    color: #fff;
+}
+
+
+#welcome-popup span {
+    background-color: #f1ff27;
+    box-shadow: 2px 2px #f1ff27;
+    color: #000;
+    padding: 10px;
+    border-radius: 7px;
+    margin-left: 20px;
+}
+
+
+#welcome-popup span:hover {
+    background-color: #f7ff8d;
+    color: #000;
+}
+
+#welcome-popup.hidden {
+    display: none;
+}
