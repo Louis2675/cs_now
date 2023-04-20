@@ -12,6 +12,11 @@ body {
 }
 
 
+body.dark {
+    background-color: rgb(53, 54, 58);
+}
+
+
 ol, ul {
     list-style-position: inside; /* permet de mettre les puces à l'intérieur de la liste (utile car sans paddign de base dans la page les points de liste ne se montrent pas et sortent de la page)*/
 }
@@ -51,9 +56,20 @@ header {
 }
 
 
+.header.dark {
+    background-color: rgb(53, 54, 58);
+}
+
+
+.header.dark img:not(.loupe img) {
+    filter: brightness(0) invert(1);
+}
+
+
 .nav-logo {
     margin: 0 0 0 20px;
-    height: 40px;
+    height: 75px;
+    width: 130px;
 }
 
 
@@ -119,6 +135,35 @@ header {
 }
 
 
+.color-button img {
+    margin: 0 0 0 20px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+
+
+.tooltip-mode-sombre {
+    font-size: 12px;
+    position: absolute; /* permet de positionner l'élément par rapport à des mesures sur la page, ne bouge jamais */
+    z-index: 1; /* permet de mettre l'élément au dessus des autres */
+    display: flex;
+    background-color: rgba(220, 220, 220);
+    width: auto;
+    padding: 10px;
+    border-radius: 10px;
+    color: #333;
+    opacity: 0; /* permet de rendre l'élément invisible */
+    pointer-events: none; /* permet de ne pas prendre en compte les évènements de la souris sur l'élément */
+}
+
+
+.color-button:hover .tooltip-mode-sombre {
+    opacity: 1; /* permet de rendre l'élément visible (l'element passe de visible a invisible quand on passe sur le bouton)*/
+    transition: ease-in-out all 0.2s; /* permet de faire une transition quand on passe la souris sur le bouton pour faire plus joli lors du changement d'opacite*/
+}
+
+
 .panier img {
     margin: 0 0 0 20px;
     height: 30px;
@@ -178,6 +223,11 @@ header {
 }
 
 
+.hamburger.dark {
+    filter: brightness(0) invert(1);
+}
+
+
 .menu {
     text-align: center; /* permet de centrer horizontalement le texte */
     display: none; /* permet de rendre l'élément invisible */
@@ -186,6 +236,11 @@ header {
 
 .menu h1 {
     margin: 30px;
+}
+
+
+.menu.dark h1 {
+    color: #fff;
 }
 
 
@@ -220,6 +275,11 @@ header {
 .card img {
     width: 200px;
     height: 150px; 
+}
+
+
+.card p {
+    text-align: center;
 }
 
 

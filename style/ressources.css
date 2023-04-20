@@ -3,40 +3,49 @@
     margin: 50px;
 }
 
+
 ol {
     padding: 20px;
 }
+
 
 ol li {
     padding: 6px;
     font-size: 1.25rem;
 }
 
+
 li a {
     text-decoration: none;
     color: #000;
 }
+
 
 li a:hover {
     color: #000;
     text-decoration: underline;
 }
 
+
 .ressources {
     margin: 30px;
 }
+
 
 .ressources h2 {
     padding: 15px;
 }
 
+
 .ressources li {
     padding: 15px;
 }
 
+
 .equipe {
     margin: 30px;
 }
+
 
 .member {
     display: flex;
@@ -44,11 +53,25 @@ li a:hover {
     justify-content: space-around;
 }
 
+
 .member .card {
     margin: 25px;
 }
 
+
 .member .title {
     text-align: center;
     margin: 5px;
+}
+
+
+.member .card img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: #d8d8d8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
 }

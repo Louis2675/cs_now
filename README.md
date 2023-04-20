@@ -2,7 +2,7 @@
 
 Site web permettant l'achat de cosmétiques sur le jeu <a href="https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/">Counter Strike: Global Offensive</a>
 
-_Veuillez noter que le site web a été optimisé pour une résolution d'affichage de `2560x1440`_
+_Veuillez noter que le site web a été optimisé pour une résolution d'affichage de `2560x1440` et pour Chromium_
 ___
 
 ## Notre projet
@@ -31,3 +31,7 @@ Veuillez noter que ce site ne constitute pas un projet commercial et n'a donc pa
 </ul>
 
 _<a href="./senot.md">Ressources destinées a Mr Senot</a>_
+
+La première page à ouvrir est la <a href="./index.html">page d'accueil</a>.
+
+&copy; CSNOW, 2023 - Tous droits réservés

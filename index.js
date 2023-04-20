@@ -8,7 +8,7 @@ const header = document.querySelector('header');
 const meilleuresVentes = document.querySelector('.meilleures-ventes');
 const sliderButton = document.querySelector('.slider-button');
 
-const mvSearch = Array.prototype.slice.call(mvCard)
+const mvSearch = Array.prototype.slice.call(mvCard) // on transforme la NodeList en Array pour pouvoir facilement parcourir les elements
 
 
 function toggleClass(element, className) {
@@ -37,8 +37,8 @@ const cookiePopup = document.querySelector('#cookie-popup'); // on récupère le
 const cookieAccept = document.querySelector('#cookie-accept'); // on récupère le bouton d'acceptation
 
 
-const fname = document.querySelector('#fname');
-const lname = document.querySelector('#lname');
+const fname = document.querySelector('#fname'); // on récupère le prénom
+const lname = document.querySelector('#lname'); // on récupère le nom
 const submitButton = document.querySelector('#submit-button');
 const welcomeClose = document.querySelector('#welcome-close');
 
@@ -48,13 +48,18 @@ const welcomeUser = document.querySelector('#welcome-user');
 
 window.onload = () => { // quand la page se charge
     
-    let shouldShowWelcomePopup = sessionStorage.getItem('shouldShowWelcomePopup');
+    if (localStorage.getItem('color') == null) { // si on a pas de couleur enregistrée
+        localStorage.setItem('color', 'light'); // on enregistre la couleur par défaut
+    } 
 
-    if (sessionStorage.getItem('shouldShowWelcomePopup') == null) {
-        sessionStorage.setItem('shouldShowWelcomePopup', true);
+    let SelectedColor = localStorage.getItem('color'); // on récupère la couleur enregistrée
+    toggleColor(SelectedColor); // on applique la couleur enregistrée
+
+    if (sessionStorage.getItem('shouldShowWelcomePopup') == null) { // si on a pas de valeur pour le popup de bienvenue
+        sessionStorage.setItem('shouldShowWelcomePopup', true); // on enregistre la valeur par défaut
     }
 
-    if (shouldShowWelcomePopup == "true") {
+    if (sessionStorage.getItem('shouldShowWelcomePopup') == "true") {
 
         welcomePopup.classList.remove('hidden');
 
@@ -87,6 +92,7 @@ function searchbar() {
     let glossaire = ['glossaire', 'gloss', 'glossa', 'glossai', 'glossair']
     let homepage = ['home', 'menu', 'homepage', 'index']
     let ressources = ['ressources', 'ressource', 'equipe', 'équipe', 'team']
+    let contact = ['contact', 'contacts', 'cont' ,'conta', 'contac', 'contacte', 'form', 'formulaire', 'connexion']
 
     if (glossaire.includes(search.toLowerCase()))
     window.open('./glossaire.html', '_self')
@@ -96,6 +102,9 @@ function searchbar() {
 
     if (ressources.includes(search.toLowerCase()))
     window.open('./ressources.html', '_self')
+
+    if (contact.includes(search.toLowerCase()))
+    window.open('./contact.html', '_self')
 
     if (search.toLowerCase() === "easter egg")
     window.open('./easter-egg.html', '_self')
@@ -195,47 +204,55 @@ try {
 
 let i = 0;
 
+function toggleColor(SelectedColor) {
+
+    if (SelectedColor == "dark") {
+        // mettre les infos quand le cas est noir
+        navLogo.classList.add("dark") //bizarre
+        let i = 0;
+        while (i < mvCard.length) {
+            mvCard[i].classList.add("dark");
+            i++;
+        }
+        header.classList.add("dark");
+        document.body.classList.add("dark");
+        meilleuresVentes.classList.add("dark");
+        sliderButton.classList.add("dark");
+        hamburger.classList.add("dark");
+        menu.classList.add("dark");
+
+    } else {
+        // mettre les infos quand le cas est blanc
+        navLogo.classList.remove("dark")
+        let i = 0;
+        while (i < mvCard.length) {
+            mvCard[i].classList.remove("dark");
+            i++;
+        }
+        header.classList.remove("dark");
+        document.body.classList.remove("dark");
+        meilleuresVentes.classList.remove("dark");
+        sliderButton.classList.remove("dark");
+        hamburger.classList.remove("dark");
+        menu.classList.remove("dark");
+    }
+}
+
+
 try {
     colorButton.onclick = () => {
         const colors = ["light", "dark"]
-
+        
         if (i + 1 == colors.length) {
             i = 0;
         } else {
             i++;
         }
 
-            var SelectedColor = colors[i]
+        let SelectedColor = colors[i]
 
-        if (SelectedColor === "dark") {
-            // mettre les infos quand le cas est noir
-            navLogo.classList.add("dark")
-            let i = 0;
-            while (i < mvCard.length) {
-                mvCard[i].classList.add("dark");
-                i++;
-            }
-            header.classList.add("dark");
-            document.body.classList.add("dark");
-            meilleuresVentes.classList.add("dark");
-            sliderButton.classList.add("dark");
-            hamburger.classList.add("dark");
-            menu.classList.add("dark");
+        toggleColor(SelectedColor);
 
-        } else {
-            // mettre les infos quand le cas est blanc
-            navLogo.classList.remove("dark")
-            let i = 0;
-            while (i < mvCard.length) {
-                mvCard[i].classList.remove("dark");
-                i++;
-            }
-            header.classList.remove("dark")
-            document.body.classList.remove("dark");
-            meilleuresVentes.classList.remove("dark");
-            sliderButton.classList.remove("dark");
-            hamburger.classList.remove("dark");
-            menu.classList.remove("dark");
-        }
+        localStorage.setItem('color', SelectedColor);
     }
 } catch (error) {}
