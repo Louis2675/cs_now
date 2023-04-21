@@ -191,8 +191,25 @@ header {
 }
 
 
+.hamburger .line:nth-child(2) {
+    opacity: 1; /* permet de rendre l'élément invisible pour qu'il ne reste que deux elements (les deux qui vont faire la croix)*/
+    transition-delay: 150ms;
+}
+
+
+.hamburger .line:nth-child(1) {
+    transition: all 0.3s ease-in-out; /* permet de faire une transition pour faire plus joli lors du changement de position */
+}
+
+
+.hamburger .line:nth-child(3) {
+    transition: all 0.3s ease-in-out; /* permet de faire une transition pour faire plus joli lors du changement de position */
+}
+
+
 .hamburger.active .line:nth-child(2) {
     opacity: 0; /* permet de rendre l'élément invisible pour qu'il ne reste que deux elements (les deux qui vont faire la croix)*/
+    transition-delay: 0ms;
 }
 
 
@@ -411,4 +428,26 @@ header.dark span {
 
 .menu.dark h1 {
     color: #fff;
+}
+
+
+footer.dark {
+    background-color: rgb(44, 45, 48);
+}
+
+
+footer.dark a {
+    color: #fff;
+    filter: brightness(0) invert(1);
+}
+
+
+footer.dark p {
+    color: #fff;
+}
+
+
+.scroll-up.dark img {
+    background-color: rgb(44, 45, 48);
+    border: solid rgb(44, 45, 48);
 }

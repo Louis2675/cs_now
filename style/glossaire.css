@@ -17,6 +17,7 @@ table {
     background-color: #fff;
 }
 
+
 th {
     background-color: rgb(228, 228, 228);
 }
@@ -27,8 +28,25 @@ table, th, td {
     padding: 8px;
 }
 
+
 footer {
     left: 0;
     bottom: 0;
     width: 100%;
+}
+
+
+.dark h1 {
+    color: #fff;
+}
+
+
+.dark table {
+    color: #fff;
+    background-color: rgb(53, 54, 58);
+}
+
+
+.dark th {
+    background-color: rgb(44, 45, 48);
 }

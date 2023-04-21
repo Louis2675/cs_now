@@ -7,6 +7,9 @@ const mvCard = document.querySelectorAll('.mv-card');
 const header = document.querySelector('header');
 const meilleuresVentes = document.querySelector('.meilleures-ventes');
 const sliderButton = document.querySelector('.slider-button');
+const footer = document.querySelector('footer');
+const tableau = document.querySelector('.tableau');
+const scrollUp = document.querySelector('.scroll-up')
 
 const mvSearch = Array.prototype.slice.call(mvCard) // on transforme la NodeList en Array pour pouvoir facilement parcourir les elements
 
@@ -218,11 +221,13 @@ function toggleColor(SelectedColor) {
         document.body.classList.add("dark");
         hamburger.classList.add("dark");
         menu.classList.add("dark");
+        footer.classList.add("dark");
+        scrollUp.classList.add("dark");
         try {
             sliderButton.classList.add("dark");
             meilleuresVentes.classList.add("dark");
+            tableau.classList.add("dark");
         } catch (error) {}
-        console.log(menu.classList())
 
     } else {
         // mettre les infos quand le cas est blanc
@@ -236,8 +241,13 @@ function toggleColor(SelectedColor) {
         document.body.classList.remove("dark");
         hamburger.classList.remove("dark");
         menu.classList.remove("dark");
-        sliderButton.classList.remove("dark");
-        meilleuresVentes.classList.remove("dark");
+        footer.classList.remove("dark");
+        scrollUp.classList.remove("dark");
+        try {
+            sliderButton.classList.remove("dark");
+            meilleuresVentes.classList.remove("dark");
+            tableau.classList.remove("dark");
+        } catch (error) {}
     }
 }
 
