@@ -12,11 +12,6 @@ body {
 }
 
 
-body.dark {
-    background-color: rgb(53, 54, 58);
-}
-
-
 ol, ul {
     list-style-position: inside; /* permet de mettre les puces à l'intérieur de la liste (utile car sans paddign de base dans la page les points de liste ne se montrent pas et sortent de la page)*/
 }
@@ -53,16 +48,6 @@ header {
     display: flex; /* permet de mettre les éléments les uns à côté des autres */
     align-items: center; /* permet de centrer verticalement les éléments */
     justify-content: space-between; /* permet de mettre un espace entre les éléments */
-}
-
-
-.header.dark {
-    background-color: rgb(53, 54, 58);
-}
-
-
-.header.dark img:not(.loupe img) {
-    filter: brightness(0) invert(1);
 }
 
 
@@ -223,11 +208,6 @@ header {
 }
 
 
-.hamburger.dark {
-    filter: brightness(0) invert(1);
-}
-
-
 .menu {
     text-align: center; /* permet de centrer horizontalement le texte */
     display: none; /* permet de rendre l'élément invisible */
@@ -236,11 +216,6 @@ header {
 
 .menu h1 {
     margin: 30px;
-}
-
-
-.menu.dark h1 {
-    color: #fff;
 }
 
 
@@ -411,4 +386,29 @@ footer .socials img:hover {
 
 #cookie-popup.hidden {
     display: none; /* permet de rendre l'élément invisible quand l'utilisateur a deja accepte (en fonction du LocalStorage) */
+}
+
+
+body.dark {
+    background-color: rgb(53, 54, 58);
+}
+
+
+.header.dark {
+    background-color: rgb(53, 54, 58);
+}
+
+
+header.dark img:not(.loupe img) {
+    filter: brightness(0) invert(1);
+}
+
+
+header.dark span {
+    filter: brightness(0) invert(1);
+}
+
+
+.menu.dark h1 {
+    color: #fff;
 }

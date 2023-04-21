@@ -64,14 +64,14 @@ window.onload = () => { // quand la page se charge
         welcomePopup.classList.remove('hidden');
 
         if (localStorage.getItem('fname') != null && localStorage.getItem('lname') != null ) {
-            welcomeUser.innerText = "Bonjour " + localStorage.getItem('fname') + " " + localStorage.getItem('lname') + ", bienvenue sur CSNOW !";
+            welcomeUser.innerText = "Bonjour " + localStorage.getItem('fname') + " " + localStorage.getItem('lname') + ", bienvenue sur CSNOW !"; // On modifie le texte du popup
         } else {
-            welcomeUser.innerText = "Bonjour, bienvenue sur CSNOW ! Pensez a vous inscrire sur la page contact pour profiter de toutes les fonctionnalités !";
+            welcomeUser.innerText = "Bonjour, bienvenue sur CSNOW ! Pensez a vous inscrire sur la page contact pour profiter de toutes les fonctionnalités !"; // On modifie le texte du popup
         }
 
         welcomeClose.onclick = () => {
-            sessionStorage.setItem('shouldShowWelcomePopup', false);
-            welcomePopup.classList.add('hidden');
+            sessionStorage.setItem('shouldShowWelcomePopup', false); // Quand on clique sur la fermuture, on sauvegarde la valeur qui determine si on doit fermer a false
+            welcomePopup.classList.add('hidden'); // On cache
         }
 
     } else console.log("Welcome popup already shown");
@@ -216,10 +216,13 @@ function toggleColor(SelectedColor) {
         }
         header.classList.add("dark");
         document.body.classList.add("dark");
-        meilleuresVentes.classList.add("dark");
-        sliderButton.classList.add("dark");
         hamburger.classList.add("dark");
         menu.classList.add("dark");
+        try {
+            sliderButton.classList.add("dark");
+            meilleuresVentes.classList.add("dark");
+        } catch (error) {}
+        console.log(menu.classList())
 
     } else {
         // mettre les infos quand le cas est blanc
@@ -231,10 +234,10 @@ function toggleColor(SelectedColor) {
         }
         header.classList.remove("dark");
         document.body.classList.remove("dark");
-        meilleuresVentes.classList.remove("dark");
-        sliderButton.classList.remove("dark");
         hamburger.classList.remove("dark");
         menu.classList.remove("dark");
+        sliderButton.classList.remove("dark");
+        meilleuresVentes.classList.remove("dark");
     }
 }
 
