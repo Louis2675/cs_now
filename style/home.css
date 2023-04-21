@@ -8,25 +8,25 @@
 
 
 .banner a {
-    position: absolute;
-    background-color: rgb(255, 217, 0);
-    border: solid 2px rgb(255, 217, 0);
-    border-radius: 40px;
-    padding: 10px;
-    font-family: Roboto, Noto, sans-serif;
-    font-size: 20px;
-    margin-top: 370px;
-    margin-left: 170px;
-    cursor: pointer;
-    text-decoration: none;
+    position: absolute; /* position absolue par rapport au parent */
+    background-color: rgb(255, 217, 0); /* couleur de fond */
+    border: solid 2px rgb(255, 217, 0); /* bordure */
+    border-radius: 40px; /* arrondi des coins */
+    padding: 10px; /* padding */
+    font-family: Roboto, Noto, sans-serif; /* police */
+    font-size: 20px; /* taille de la police */
+    margin-top: 370px; /* marge du haut */
+    margin-left: 170px; /* marge de gauche */
+    cursor: pointer; /* curseur en mode pointeur */
+    text-decoration: none; /* enleve le soulignement du lien */
     color: #333;
-    box-shadow: 1px 1px rgb(255, 217, 0);
+    box-shadow: 1px 1px rgb(255, 217, 0); /* ajoute une ombre */
 }
 
 
 .banner a:hover {
-    background-color: rgb(255, 231, 98);
-    border: solid 2px rgb(255, 231, 98);
+    background-color: rgb(255, 231, 98); /* couleur de fond */
+    border: solid 2px rgb(255, 231, 98); /* bordure */
 }
 
 
@@ -37,54 +37,54 @@
 
 
 .slider {
-    width: 80%;
-    margin: auto;
-    margin-top: 100px;
+    width: 80%; /* largeur a 80% */
+    margin: auto; /* centre le slider */
+    margin-top: 100px; 
     padding: 50px;
 }
 
 
 .img-slider img{
-    max-width: 100%;
-    max-height: 500px;
-    border-radius: 40px;
-    display: none;
+    max-width: 100%; /* largeur max a 100% */
+    max-height: 500px; /* hauteur max a 500px */
+    border-radius: 40px; /* arrondi des coins */
+    display: none; /* cache l'image */
 }
 
 
 .img-slider img.active {
-    display: block;
-    animation: fade 1s;
+    display: block; /* affiche l'image */
+    animation: fade 1s; /* animation fade */
 }
 
 
-@keyframes fade {
+@keyframes fade { /* animation fade, permet de faire une mini-flash animation */
     from {
-        opacity: 0.75;
+        opacity: 0.75; /* opacite a 0.75 */
     }
     to {
-        opacity: 1;
+        opacity: 1; /* opacite a 1 */
     }
 }
 
 
 .slider-button img {
-    width: 40px;
-    height: 40px;
+    width: 40px; /* largeur a 40px */
+    height: 40px; /* hauteur a 40px */
     margin-top: 10px;
-    position: absolute;
-    display: flex;
-    cursor: pointer;
+    position: absolute; /* position absolue par rapport au parent */
+    display: flex; /* affiche en flex */
+    cursor: pointer; /* curseur en mode pointeur */
 }
 
 
 .slider-button.dark img {
-    filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1); /* filtre inverser la luminosite */
 }
 
 
 .button-right {
-    margin-left: 51%;
+    margin-left: 51%; /* marge de gauche a 51% */
 }
 
 
@@ -94,9 +94,9 @@
 
 
 .meilleures-ventes {
-    width: 80%;
-    margin: 50px auto;
-    text-align: center;
+    width: 80%; /* largeur a 80% */
+    margin: 50px auto; /* centre le slider */
+    text-align: center; /* alignement du texte au centre */
 }
 
 
@@ -126,26 +126,26 @@
 
 
 .img-mv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-wrap: wrap;
+    display: flex; /* affiche en flex */
+    justify-content: center; /* alignement horizontal au centre */
+    align-items: center; /* alignement vertical au centre */
+    text-align: center; /* alignement du texte au centre */
+    flex-wrap: wrap; /* permet de mettre les elements en ligne */
     margin: 30px auto 80px auto;
 }
 
 
 #welcome-popup {
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    max-width: 50%;
-    justify-content: space-between;
-    padding: 50px;
-    top: 70vh;
-    left: auto;
-    position: fixed;
-    background-color: #333;
+    margin: 0 auto; /* centre le popup */
+    display: flex; /* affiche en flex */
+    align-items: center; /* alignement vertical au centre */
+    max-width: 50%; /* largeur max a 50% */
+    justify-content: space-between; /* alignement horizontal a l'espace entre les elements */
+    padding: 50px; /* padding */
+    top: 70vh; /* position du haut a 70vh */
+    left: auto; /* position de gauche a auto */
+    position: fixed; /* position fixe */
+    background-color: #333; /* couleur de fond */
     color: #fff;
 }
 
@@ -155,7 +155,7 @@
     box-shadow: 2px 2px rgb(233, 192, 12);
     color: #000;
     padding: 10px;
-    border-radius: 7px;
+    border-radius: 7px; /* arrondi des coins */
     margin-left: 20px;
     cursor: pointer;
 }

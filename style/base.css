@@ -286,10 +286,10 @@ header {
 
 
 .scroll-up img {
-    position: fixed;
-    width: 50px;
-    right: 30px;
-    bottom: 60px;
+    position: fixed; /* permet de positionner l'élément par rapport à des mesures sur la page, ne bouge jamais */
+    width: 50px; /* permet de definir la largeur de l'element */
+    right: 30px; /* permet de positionner l'élément à 30px de la droite de la page */
+    bottom: 60px; /* permet de positionner l'élément à 60px du bas de la page */
     cursor: pointer;
     background-color: #d8d8d8;
     border: solid #d8d8d8;
@@ -307,7 +307,7 @@ footer {
     color: #333;
     font-size: 16px;
     margin-top: 50px;
-    padding: 40px 20px 10px 20px;
+    padding: 40px 20px 10px 20px; /* permet de definir les padding de l'element */
 }
 
 
@@ -339,15 +339,15 @@ footer a:hover {
 
 
 footer .regroup {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; /* permet de mettre les éléments les uns à côté des autres */
+    justify-content: space-between; /* permet de mettre un espace entre les éléments */
+    align-items: center; /* permet de centrer verticalement les éléments */
 }
 
 
 footer .regroup p {
     margin: 0 20px;
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* permet de definir la taille de la police */
 }
 
 
@@ -387,12 +387,12 @@ footer .socials img:hover {
 
 
 #cookie-popup span {
-    background-color: rgb(233, 192, 12);
-    box-shadow: 2px 2px rgb(233, 192, 12);
+    background-color: rgb(233, 192, 12); /* permet de changer la couleur de fond */
+    box-shadow: 2px 2px rgb(233, 192, 12); /* permet d'ajouter une ombre à l'élément */
     border-radius: 5px;
     padding: 10px;
-    color: #333;
-    cursor: pointer;
+    color: #333; /* permet de changer la couleur du texte */
+    cursor: pointer; /* permet de changer le curseur quand on passe la souris dessus */
 }
 
 
@@ -417,12 +417,12 @@ body.dark {
 
 
 header.dark img:not(.loupe img) {
-    filter: brightness(0) invert(1);
-}
+    filter: brightness(0) invert(1); /* permet de changer la couleur de l'image */
+} 
 
 
 header.dark span {
-    filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1); /* permet de changer la couleur de l'image */
 }
 
 

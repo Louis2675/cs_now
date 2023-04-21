@@ -62,9 +62,9 @@ window.onload = () => { // quand la page se charge
         sessionStorage.setItem('shouldShowWelcomePopup', true); // on enregistre la valeur par défaut
     }
 
-    if (sessionStorage.getItem('shouldShowWelcomePopup') == "true") {
+    if (sessionStorage.getItem('shouldShowWelcomePopup') == "true") { // si on doit montrer le popup
 
-        welcomePopup.classList.remove('hidden');
+        welcomePopup.classList.remove('hidden'); // On cache l'element
 
         if (localStorage.getItem('fname') != null && localStorage.getItem('lname') != null ) {
             welcomeUser.innerText = "Bonjour " + localStorage.getItem('fname') + " " + localStorage.getItem('lname') + ", bienvenue sur CSNOW !"; // On modifie le texte du popup
@@ -77,7 +77,7 @@ window.onload = () => { // quand la page se charge
             welcomePopup.classList.add('hidden'); // On cache
         }
 
-    } else console.log("Welcome popup already shown");
+    } else console.log("Welcome popup already shown"); // si on a deja montré le popup, on affiche un message dans la console
 
     if (shouldShowPopup(storageType)) { // si on doit afficher le popup
         cookiePopup.classList.remove('hidden'); // on l'affiche
@@ -92,15 +92,15 @@ window.onload = () => { // quand la page se charge
 function searchbar() {
     var search = document.getElementById('search').value
 
-    let glossaire = ['glossaire', 'gloss', 'glossa', 'glossai', 'glossair']
-    let homepage = ['home', 'menu', 'homepage', 'index']
-    let ressources = ['ressources', 'ressource', 'equipe', 'équipe', 'team']
-    let contact = ['contact', 'contacts', 'cont' ,'conta', 'contac', 'contacte', 'form', 'formulaire', 'connexion']
+    let glossaire = ['glossaire', 'gloss', 'glossa', 'glossai', 'glossair'] // possibles entres qui renvoient vers la page glossaire
+    let homepage = ['home', 'menu', 'homepage', 'index'] // possibles entres qui renvoient vers la page d'accueil
+    let ressources = ['ressources', 'ressource', 'equipe', 'équipe', 'team'] // possibles entres qui renvoient vers la page ressources
+    let contact = ['contact', 'contacts', 'cont' ,'conta', 'contac', 'contacte', 'form', 'formulaire', 'connexion'] // possibles entres qui renvoient vers la page contact
 
-    if (glossaire.includes(search.toLowerCase()))
-    window.open('./glossaire.html', '_self')
+    if (glossaire.includes(search.toLowerCase())) // si l'entrée est dans la liste des possibles entres qui renvoient vers la page glossaire
+    window.open('./glossaire.html', '_self') // on ouvre la page glossaire dans le meme onglet 
 
-    if (homepage.includes(search.toLowerCase()))
+    if (homepage.includes(search.toLowerCase()))  
     window.open('./index.html', '_self')
 
     if (ressources.includes(search.toLowerCase()))
@@ -115,14 +115,14 @@ function searchbar() {
 
 
 try {
-    submitButton.onclick = () => {
-        if (!(fname.value == null && lname.value == null)) {
+    submitButton.onclick = () => { // quand on clique sur le submit button
+        if (!(fname.value == null && lname.value == null)) { // si la valeur du prenom et nom sont differentes de null
 
-        const fnameText = fname.value;
-        const lnameText = lname.value;
+        const fnameText = fname.value; // on stocke les valeurs des inputs dans des variables
+        const lnameText = lname.value; // on stocke les valeurs des inputs dans des variables
     
-        localStorage.setItem('fname', fnameText);
-        localStorage.setItem('lname', lnameText);
+        localStorage.setItem('fname', fnameText); // on enregistre les valeurs dans le localStorage
+        localStorage.setItem('lname', lnameText); // on enregistre les valeurs dans le localStorage
         
         }
     }
@@ -140,24 +140,24 @@ const precedenteg = document.querySelector('.button-left-eg');
 
 let count = 0;
 
-function slideSuivante() {
-    items[count].classList.remove('active');
+function slideSuivante() { // fonction qui permet de passer a la slide suivante
+    items[count].classList.remove('active'); // on enleve la classe active a l'element actuel
 
-    if(count < nbSlide - 1){
+    if(count < nbSlide - 1){ 
         count++;
     } else {
         count = 0;
     }
 
-    items[count].classList.add('active')
+    items[count].classList.add('active') // on ajoute la classe active a l'element suivant
 }
 
 try {
-    suivant.addEventListener('click', slideSuivante);
+    suivant.addEventListener('click', slideSuivante); // quand on clique sur le bouton suivant, on execute la fonction slideSuivante
 } catch (error) {}
 
-function slidePrecedente() {
-    items[count].classList.remove('active');
+function slidePrecedente() { // fonction qui permet de passer a la slide precedente
+    items[count].classList.remove('active'); // on enleve la classe active a l'element actuel
 
     if(count > 0){
         count--;
@@ -165,15 +165,15 @@ function slidePrecedente() {
         count = nbSlide - 1;
     }
 
-    items[count].classList.add('active')
+    items[count].classList.add('active') // on ajoute la classe active a l'element precedent
 }
 
 try {
-    precedent.addEventListener('click', slidePrecedente);
-} catch (error) {}
+    precedent.addEventListener('click', slidePrecedente); // quand on clique sur le bouton precedent, on execute la fonction slidePrecedente
+} catch (error) {} 
 
-function slideSuivanteeg() {
-    itemseg[count].classList.remove('active');
+function slideSuivanteeg() { // fonction qui permet de passer a la slide suivante dans l'easter egg
+    itemseg[count].classList.remove('active'); // met eneleve active class
 
     if(count < nbSlideeg - 1){
         count++;
@@ -181,15 +181,15 @@ function slideSuivanteeg() {
         count = 0;
     }
 
-    itemseg[count].classList.add('active')
+    itemseg[count].classList.add('active') // add la class active a l element suivant
 }
 
 try {
-    suivanteg.addEventListener('click', slideSuivanteeg);
+    suivanteg.addEventListener('click', slideSuivanteeg); // quand on clique sur le bouton suivant, on execute la fonction slideSuivante
 } catch (error) {}
 
 function slidePrecedenteeg() {
-    itemseg[count].classList.remove('active');
+    itemseg[count].classList.remove('active'); //  eneleve active class de la banniere actuelle
 
     if(count > 0){
         count--;
@@ -197,32 +197,33 @@ function slidePrecedenteeg() {
         count = nbSlideeg - 1;
     }
 
-    itemseg[count].classList.add('active')
+    itemseg[count].classList.add('active') // add la class active a l element precedent
 }
 
 try {
-    precedenteg.addEventListener('click', slidePrecedenteeg);
+    precedenteg.addEventListener('click', slidePrecedenteeg); // quand on clique sur le bouton precedent, on execute la fonction slidePrecedente
 } catch (error) {}
 
 
 let i = 0;
 
-function toggleColor(SelectedColor) {
+function toggleColor(SelectedColor) { // fonction qui permet de changer la couleur du site
 
-    if (SelectedColor == "dark") {
+    if (SelectedColor == "dark") { // si la couleur selectionnee est dark
         // mettre les infos quand le cas est noir
-        navLogo.classList.add("dark") //bizarre
+        navLogo.classList.add("dark") // on ajoute la classe qui modifie l'element dans le cas ou on est en dark mode
         let i = 0;
         while (i < mvCard.length) {
-            mvCard[i].classList.add("dark");
-            i++;
+            mvCard[i].classList.add("dark");  // on ajoute la classe qui modifie l'element dans le cas ou on est en dark mode
+            i++; 
         }
-        header.classList.add("dark");
-        document.body.classList.add("dark");
-        hamburger.classList.add("dark");
-        menu.classList.add("dark");
+        header.classList.add("dark"); // on ajoute la classe qui modifie l'element dans le cas ou on est en dark mode
+        document.body.classList.add("dark"); // on ajoute la classe qui modifie l'element dans le cas ou on est en dark mode
+        hamburger.classList.add("dark"); // on ajoute la classe qui modifie l'element dans le cas ou on est en dark mode
+        menu.classList.add("dark"); // on ajoute la classe qui modifie l'element dans le cas ou on est en dark mode
         footer.classList.add("dark");
         scrollUp.classList.add("dark");
+
         try {
             sliderButton.classList.add("dark");
             meilleuresVentes.classList.add("dark");
@@ -231,21 +232,21 @@ function toggleColor(SelectedColor) {
 
     } else {
         // mettre les infos quand le cas est blanc
-        navLogo.classList.remove("dark")
+        navLogo.classList.remove("dark") // on enleve la classe qui modifie l'element dans le cas ou on est en dark mode
         let i = 0;
         while (i < mvCard.length) {
-            mvCard[i].classList.remove("dark");
+            mvCard[i].classList.remove("dark"); // on enleve la classe qui modifie l'element dans le cas ou on est en dark mode
             i++;
         }
-        header.classList.remove("dark");
-        document.body.classList.remove("dark");
-        hamburger.classList.remove("dark");
-        menu.classList.remove("dark");
+        header.classList.remove("dark"); // on enleve la classe qui modifie l'element dans le cas ou on est en dark mode
+        document.body.classList.remove("dark");  // on enleve la classe qui modifie l'element dans le cas ou on est en dark mode
+        hamburger.classList.remove("dark"); // on enleve la classe qui modifie l'element dans le cas ou on est en dark mode
+        menu.classList.remove("dark"); // on enleve la classe qui modifie l'element dans le cas ou on est en dark mode
         footer.classList.remove("dark");
         scrollUp.classList.remove("dark");
         try {
-            sliderButton.classList.remove("dark");
-            meilleuresVentes.classList.remove("dark");
+            sliderButton.classList.remove("dark"); // on enleve la classe qui modifie l'element dans le cas ou on est en dark mode
+            meilleuresVentes.classList.remove("dark");  // on enleve la classe qui modifie l'element dans le cas ou on est en dark mode
             tableau.classList.remove("dark");
         } catch (error) {}
     }
@@ -253,19 +254,19 @@ function toggleColor(SelectedColor) {
 
 
 try {
-    colorButton.onclick = () => {
-        const colors = ["light", "dark"]
+    colorButton.onclick = () => { // quand on clique sur le bouton de changement de couleur
+        const colors = ["light", "dark"] // on stocke les couleurs dans un tableau
         
-        if (i + 1 == colors.length) {
-            i = 0;
+        if (i + 1 == colors.length) { // si on est a la derniere couleur du tableau
+            i = 0; // on remet i a 0
         } else {
-            i++;
+            i++; // sinon on incremente i
         }
 
-        let SelectedColor = colors[i]
+        let SelectedColor = colors[i] // on stocke la couleur selectionnee dans une variable
 
-        toggleColor(SelectedColor);
+        toggleColor(SelectedColor); // on execute la fonction qui permet de changer la couleur du site
 
-        localStorage.setItem('color', SelectedColor);
+        localStorage.setItem('color', SelectedColor); // on enregistre la couleur selectionnee dans le localStorage
     }
 } catch (error) {}
