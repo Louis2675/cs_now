@@ -11,43 +11,44 @@
 <body>
     <!-- Haut de la page (marquee + navbar + logos + search + hamburger menu) -->
     <div class="marquee-container" id="promotion">
+        <!--Cette marquee permet de faire defiler une fausse promotion (programmee en css dans base.css)-->
         <p class="marquee">Black Friday : profitez d'offres jusqu'à -70 % (sauf pour Antonin, Kai Tano et Alexandre Cuvelier) avec le code : "NSI70"</p>
     </div>
-    <header class="header">
+    <header class="header"> <!--Header de la page (regroupe le haut de la page en general)-->
         <div class="logo">
             <a href="index.html"><img src="./images/counter-strike-global-offensive-cs-go-logo.png" alt="main-logo" class="nav-logo"></a>
         </div>
-        <div class="search">
-            <input type="search" name="search-bar" placeholder="Rechercher un skin" id="search" onchange="searchbar()">
+        <div class="search"> <!-- contient la searchbar et la loupe dans un boutton -->
+            <input type="search" name="search-bar" placeholder="Rechercher un skin" id="search" onchange="searchbar()"> 
             <div class="loupe">
                 <button><img src="./images/icons/loupe.png" alt="loupe"></button>
-                <div class="tooltip-loupe"><b>Rechercher</b></div>
+                <div class="tooltip-loupe"><b>Rechercher</b></div> <!--Tooltip pour quand on hover le boutton il y ait une description-->
             </div>
         </div>
-        <div class="navbar">
-            <div class="color-button">
+        <div class="navbar"> <!-- contient les bouttons de la navbar -->
+            <div class="color-button"> <!-- contient le boutton pour changer la couleur du site -->
                 <img src="./images/icons/mode-sombre.png" alt="mode-sombre">
-                <div class="tooltip-mode-sombre"><b>Mode sombre</b></div>
+                <div class="tooltip-mode-sombre"><b>Mode sombre</b></div>  <!--Tooltip pour quand on hover le boutton il y ait une description-->
             </div>
             <div class="panier">
-                <a href="#" id="cart"><img src="./images/icons/shopping-cart.png" alt="cart"></a>
+                <a href="vide.html" id="cart"><img src="./images/icons/shopping-cart.png" alt="cart"></a> <!-- lien vers la page panier -->
                 <div class="tooltip-panier"><b>Panier</b></div>
             </div>
-            <div class="hamburger">
+            <div class="hamburger"> <!-- contient le boutton pour ouvrir le menu hamburger -->
                 <span class="line"></span>
                 <span class="line"></span>
                 <span class="line"></span>
             </div>
         </div>
     </header>
-    <!-- Menu Hamburger -->
+    <!-- Menu Hamburger, ce menu contient de multiples "cartes" qui menent vers d'autres pages du site-->
     <div class="menu">
-        <h1>Fusils</h1>
+        <h1>Fusils</h1> <!-- contient les cartes des fusils -->
         <div class="fusils armes">
-            <div class="m4a4 card">
-                <a href="vide.html">
-                    <h3>M4A4</h3>
-                    <img src="./images/base-weapons/m4a4.png" alt="m4a4">
+            <div class="m4a4 card"> <!-- contient une carte avec une image et un titre -->
+                <a href="vide.html"> <!-- lien vers la page du fusil -->
+                    <h3>M4A4</h3> <!-- titre de la carte -->
+                    <img src="./images/base-weapons/m4a4.png" alt="m4a4"> <!-- image de la carte -->
                 </a>
             </div>
             <div class="m4a1-s card">
@@ -126,33 +127,33 @@
     </div>  
     <!-- Contenu de la page (disparait si le hamburger menu est actif) -->
     <div class="container">
-        <div class="scroll-up">
+        <div class="scroll-up"> <!-- Boutton pour remonter en haut de la page -->
             <a href="index.html#promotion"><img src="./images/icons/arrow-up.png" alt="scroll-up"></a>
         </div>
-        <div class="banner">
-            <a href="index.html#meilleures-ventes">Découvrez nos offres</a>
+        <div class="banner"> <!--Banniere de la homepage-->
+            <a href="index.html#meilleures-ventes">Découvrez nos offres</a> <!--relie vers meilleures ventes, contient des cartes-->
             <img src="./images/banniere.png" alt="banniere">
         </div>
         <div class="slider"> 
-            <div class="img-slider">
+            <div class="img-slider"> <!--Carrousel d'image-->
                 <img src="./images/collection_lore.png" alt="lore" class="active">
                 <img src="./images/collection_asiimov.png" alt="asiimov">
                 <img src="./images/collection_neonoir.png" alt="neo-noir">
                 <img src="./images/collection_gamma.png" alt="gamma-doppler">
                 <img src="./images/collection_fade.png" alt="fade">
             </div>
-            <div class="slider-button">
-                <div class="button-left"><img src="./images/icons/arrow-left.png" alt="fleche-gauche"></div>
-                <div class="button-right"><img src="./images/icons/arrow-right.png" alt="fleche-droite"></div>
+            <div class="slider-button"> <!-- Carrousel d'images -->
+                <div class="button-left"><img src="./images/icons/arrow-left.png" alt="fleche-gauche"></div> <!-- bouton pour aller à l'image précédente -->
+                <div class="button-right"><img src="./images/icons/arrow-right.png" alt="fleche-droite"></div> <!-- bouton pour aller à l'image suivante -->
             </div>
         </div>
-        <div class="meilleures-ventes" id="meilleures-ventes">
-            <h1>Meilleures Ventes</h1>
-            <div class="img-mv">
-                <div class="card mv-card">
-                    <a href="vide.html">
-                        <h3>USP-S | Kill-Confirmed</h3>
-                        <img src="./images/skins/usp-s/kill_confirmed.png" alt="USPS_K_C">
+        <div class="meilleures-ventes" id="meilleures-ventes"> <!--Meilleures ventes-->
+            <h1>Meilleures Ventes</h1> <!--Titre-->
+            <div class="img-mv"> <!--Images des meilleures ventes-->
+                <div class="card mv-card">  <!--Carte de la meilleure vente-->
+                    <a href="vide.html">    <!--Lien vers la page de la meilleure vente-->
+                        <h3>USP-S | Kill-Confirmed</h3> <!--Titre de la meilleure vente-->
+                        <img src="./images/skins/usp-s/kill_confirmed.png" alt="USPS_K_C"> <!--Image de la meilleure vente-->
                     </a>
                 </div>
                 <div class="card mv-card">
@@ -184,40 +185,40 @@
     </div>
     <!-- Footer -->
     <footer>
-        <div class="top-footer">
-            <div class="link-block">
-                <a href="index.html">Page d'accueil</a>
-                <a href="glossaire.html">Glossaire</a>
-                <a href="ressources.html">Ressources</a>    
-                <a href="contact.html">Contact</a>
+        <div class="top-footer"> <!-- Contient la partie haute du footer -->
+            <div class="link-block"> <!-- Contient les liens vers les pages -->
+                <a href="index.html">Page d'accueil</a> <!-- lien vers la page d'acceuil-->
+                <a href="glossaire.html">Glossaire</a> <!-- lien vers la page du glossaire-->
+                <a href="ressources.html">Ressources</a> <!-- lien vers la page des ressources-->
+                <a href="contact.html">Contact</a> <!-- lien vers la page de contact-->
             </div>  
         </div>
-        <div class="bottom-footer">
-            <div class="footer-info">
-                <p id="copyright">&copy; Copyright 2023 - CS_NOW Tous Droits Réservés</p>
-                <div class="regroup">
-                    <a href="https://www.visa.fr/"><img src="./images/icons/credit-card.png" alt="visa-logo" id="payments-logo"></a>
+        <div class="bottom-footer"> <!-- Contient la partie basse du footer -->
+            <div class="footer-info"> <!-- Contient les informations de la page -->
+                <p id="copyright">&copy; Copyright 2023 - CS_NOW Tous Droits Réservés</p> <!-- Contient le copyright -->
+                <div class="regroup"> <!-- Contient les logos de paiement et les réseaux sociaux -->
+                    <a href="https://www.visa.fr/"><img src="./images/icons/credit-card.png" alt="visa-logo" id="payments-logo"></a> <!-- Logo de visa -->
                     <p><strong>|</strong></p>
                     <div class="socials">
-                        <a href="mailto:cs_now@gmail.com"><img src="./images/icons/email.png" alt="mail" class="footer-icons"></a>
-                        <a href="https://instagram.com" target="_blank"><img src="./images/icons/instagram.png" alt="instagram" class="footer-icons"></a>
-                        <a href="https://twitter.com" target="_blank"><img src="./images/icons/twitter.png" alt="twitter" class="footer-icons"></a>
-                        <a href="https://facebook.com" target="_blank"><img src="./images/icons/facebook.png" alt="facebook" class="footer-icons"></a>
+                        <a href="mailto:cs_now@gmail.com"><img src="./images/icons/email.png" alt="mail" class="footer-icons"></a> <!-- Logo de mail -->
+                        <a href="https://instagram.com" target="_blank"><img src="./images/icons/instagram.png" alt="instagram" class="footer-icons"></a>   <!-- Logo d'instagram -->
+                        <a href="https://twitter.com" target="_blank"><img src="./images/icons/twitter.png" alt="twitter" class="footer-icons"></a> <!-- Logo de twitter -->
+                        <a href="https://facebook.com" target="_blank"><img src="./images/icons/facebook.png" alt="facebook" class="footer-icons"></a> <!-- Logo de facebook -->
                     </div>
                 </div>
             </div>
         </div>
     </footer>
     <!-- Popups -->
-    <div id="welcome-popup" class="hidden">
-        <p id="welcome-user">Erreur chargement popup d'accueil</p>
-        <span id="welcome-close">X</span>
+    <div id="welcome-popup" class="hidden"> <!-- Popup d'accueil -->
+        <p id="welcome-user">Erreur chargement popup d'accueil</p> <!-- Affiche une erreur si le js ne passe pas -->
+        <span id="welcome-close">X</span> <!-- Bouton pour fermer le popup -->
     </div>
-    <div id="cookie-popup" class="hidden">
-        <div class="cookie-flex">
-            <p>En poursuivant votre navigation sur ce site, vous acceptez l'utilisation de cookies</p>
-            <span id="cookie-accept">Accepter</span>
+    <div id="cookie-popup" class="hidden"> <!-- Popup de cookies -->
+        <div class="cookie-flex">  <!-- Contient le texte et le bouton pour accepter les cookies -->
+            <p>En poursuivant votre navigation sur ce site, vous acceptez l'utilisation de cookies</p> <!-- Texte -->
+            <span id="cookie-accept">Accepter</span> <!-- Bouton pour accepter les cookies -->
         </div>
     </div>
-    <script src="index.js"></script>
+    <script src="index.js"></script> <!-- Script js -->
 </body>
