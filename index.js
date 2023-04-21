@@ -96,21 +96,28 @@ function searchbar() {
     let homepage = ['home', 'menu', 'homepage', 'index'] // possibles entres qui renvoient vers la page d'accueil
     let ressources = ['ressources', 'ressource', 'equipe', 'équipe', 'team'] // possibles entres qui renvoient vers la page ressources
     let contact = ['contact', 'contacts', 'cont' ,'conta', 'contac', 'contacte', 'form', 'formulaire', 'connexion'] // possibles entres qui renvoient vers la page contact
+    let armes = ['m4a4', 'm4a1-s', 'ak-47', 'awp', 'fusils', 'fusil', 'usp-s', 'glock-18', 'p250', 'desert eagle', 'deagle', 'pistolets', 'pistolet', 'karambit', 'butterfly', 'bayonnette', 'bayonnette m9', 'shadow daggers', 'couteaux']
 
     if (glossaire.includes(search.toLowerCase())) // si l'entrée est dans la liste des possibles entres qui renvoient vers la page glossaire
     window.open('./glossaire.html', '_self') // on ouvre la page glossaire dans le meme onglet 
 
-    if (homepage.includes(search.toLowerCase()))  
+    else if (homepage.includes(search.toLowerCase()))  
     window.open('./index.html', '_self')
 
-    if (ressources.includes(search.toLowerCase()))
+    else if (ressources.includes(search.toLowerCase()))
     window.open('./ressources.html', '_self')
 
-    if (contact.includes(search.toLowerCase()))
+    else if (contact.includes(search.toLowerCase()))
     window.open('./contact.html', '_self')
 
-    if (search.toLowerCase() === "easter egg")
+    else if (armes.includes(search.toLowerCase()))
+    window.open('./vide.html', '_self')
+
+    else if (search.toLowerCase() === "easter egg")
     window.open('./easter-egg.html', '_self')
+
+    else
+    window.open('./erreur.html', '_self')
 }
 
 

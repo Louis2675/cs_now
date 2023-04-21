@@ -1,6 +1,6 @@
 # cs_now
 
-mettre toutes les pages dans la search bar (pas sur que conatct y soit)
+
 
 mettre le code dans le validateur
 
