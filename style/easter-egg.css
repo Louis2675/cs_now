@@ -393,15 +393,15 @@ footer .socials img:hover {
 
 
 .slider-button-eg.dark img {
-    filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1); /* change l'image en noir et blanc */
 }
 
 
 .button-right-eg {
-    margin-left: 51%;
+    margin-left: 51%; /* permet de centrer l'élément (plus ou moins) */
 }
 
 
 .button-left-eg {
-    margin-left: 47%;
+    margin-left: 47%; /* permet de centrer l'élément (plus ou moins) */
 }

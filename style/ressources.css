@@ -1,6 +1,6 @@
 .container h1 {
     text-align: center;
-    margin: 50px;
+    margin: 50px; /* margin-top a 50px */
 }
 
 
@@ -11,24 +11,24 @@ ol {
 
 ol li {
     padding: 6px;
-    font-size: 1.25rem;
+    font-size: 1.25rem; /* taille de la police a 1.25rem */
 }
 
 
 li a {
-    text-decoration: none;
+    text-decoration: none; /* enleve le soulignement du lien */
     color: #000;
 }
 
 
 li a:hover {
     color: #000;
-    text-decoration: underline;
+    text-decoration: underline; /* ajoute un soulignement au lien */
 }
 
 
 .ressources {
-    margin: 30px;
+    margin: 30px; /* margin a 30px */
 }
 
 
@@ -48,9 +48,9 @@ li a:hover {
 
 
 .member {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    display: flex; /* affiche en flex */
+    align-items: center; /* aligne les elements au centre */
+    justify-content: space-around; /* aligne les elements a l'espace entre les elements */
 }
 
 
@@ -60,18 +60,18 @@ li a:hover {
 
 
 .member .title {
-    text-align: center;
+    text-align: center; /* aligne le texte au centre */
     margin: 5px;
 }
 
 
 .member .card img {
-    width: 300px;
+    width: 300px; /* largeur a 300px */
     height: 300px;
     border-radius: 50%;
-    background-color: #d8d8d8;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: #d8d8d8; /* couleur de fond a #d8d8d8 */
+    display: flex; /* affiche en flex */
+    align-items: center; /* aligne les elements au centre */
+    justify-content: center; /* aligne les espaces entre eux au centre */
     margin: 20px;
 }

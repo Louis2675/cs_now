@@ -1,6 +1,6 @@
 .register-form {
-    width: 40%;
-    margin: 100px auto;
+    width: 40%; /* met la largeur a 40% */
+    margin: 100px auto; /* centre le formulaire */
 }
 
 
@@ -10,40 +10,40 @@
 
 
 .register-form form {
-    display: grid;
-    text-align: center;
-    padding: 20px;
+    display: grid; /* affiche le register form en grid */
+    text-align: center; /* aligne le texte au centre */
+    padding: 20px;  /* ajoute un padding de 20px */
     border: solid 1px #4a4a4a;
-    border-radius: 10px;
+    border-radius: 10px; /* arrondi les bords */
     box-shadow: 3px 3px #585858;
 }
 
 
 .register-form label, input {
-    margin: 10px 0;
+    margin: 10px 0; /* ajoute un margin de 10px au dessus et en dessous */
 }
 
 
 .register-form input {
-    padding: 10px;
+    padding: 10px; /* ajoute un padding de 10px */
 }
 
 
 .register-form span {
-    color: red;
+    color: red; /* met le texte en rouge */
 }
 
 
 .register-form input:focus {
-    outline-color: rgb(47, 137, 211);
+    outline-color: rgb(47, 137, 211); /* met une bordure bleu autour de l'input quand on clique dessus */
 }
 
 .promo-consent label{
-    font-size: 15px;
-    font-style: italic;
+    font-size: 15px; /* met la taille de la police a 15px */
+    font-style: italic; /* met l'italique */
 }
 
 #required-text {
-    text-align: end;
-    padding: 12px;
+    text-align: end; /* aligne le texte a droite */
+    padding: 12px; /* ajoute un padding de 12px */
 }

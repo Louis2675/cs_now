@@ -4,14 +4,14 @@
 
 
 .container h1 {
-    text-align: center;
-    margin-top: 50px;
+    text-align: center; /* aligne le texte au centre */
+    margin-top: 50px; /* margin-top a 50px */
 }
 
 
 table {
-    margin: 70px auto !important;
-    border: 1px solid #000;
+    margin: 70px auto !important; /* centre le tableau */
+    border: 1px solid #000; /* met une bordure noire autour du tableau */
     margin: 0;
     padding: 0;
     background-color: #fff;
@@ -23,12 +23,12 @@ th {
 
 
 table, th, td {
-    border: 1px solid black;
+    border: 1px solid black; /* met une bordure noire autour du tableau, th et td */
     padding: 8px;
 }
 
 footer {
-    left: 0;
-    bottom: 0;
-    width: 100%;
+    left: 0; /* met le footer a gauche */
+    bottom: 0; /* met le footer en bas de la page */
+    width: 100%; /* largeur a 100% */
 }
