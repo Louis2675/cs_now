@@ -1,15 +1,15 @@
-const hamburger = document.querySelector('.hamburger');
-const menu = document.querySelector('.menu');
-const container = document.querySelector('.container');
-const colorButton = document.querySelector('.color-button');
-const navLogo = document.querySelector('.nav-logo');
-const mvCard = document.querySelectorAll('.mv-card');
-const header = document.querySelector('header');
-const meilleuresVentes = document.querySelector('.meilleures-ventes');
-const sliderButton = document.querySelector('.slider-button');
-const footer = document.querySelector('footer');
-const tableau = document.querySelector('.tableau');
-const scrollUp = document.querySelector('.scroll-up')
+const hamburger = document.querySelector('.hamburger'); // on recupere le .hamburger
+const menu = document.querySelector('.menu'); // on recupere le .menu
+const container = document.querySelector('.container'); // on recupere le .container
+const colorButton = document.querySelector('.color-button'); // on recupere le .color-button
+const navLogo = document.querySelector('.nav-logo'); // on recupere le .nav-logo
+const mvCard = document.querySelectorAll('.mv-card'); // on recupere les .mv-card
+const header = document.querySelector('header'); // on recupere le header
+const meilleuresVentes = document.querySelector('.meilleures-ventes'); // on recupere le .meilleures-ventes
+const sliderButton = document.querySelector('.slider-button');  // on recupere le .slider-button
+const footer = document.querySelector('footer'); // on recupere le footer
+const tableau = document.querySelector('.tableau'); // on recupere le .tableau
+const scrollUp = document.querySelector('.scroll-up') // on recupere le .scroll-up
 
 const mvSearch = Array.prototype.slice.call(mvCard) // on transforme la NodeList en Array pour pouvoir facilement parcourir les elements
 
