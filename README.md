@@ -15,6 +15,8 @@ Veuillez noter que ce site ne constitute pas un projet commercial et n'a donc pa
 
 <img src="./images/arborescence.png">
 
+_(ajout de erreur.html aussi)_
+
 ### Ressources tierces utilisées
 
  <ul>
@@ -30,7 +32,7 @@ Veuillez noter que ce site ne constitute pas un projet commercial et n'a donc pa
     <li><a href="https://github.com/Louis2675">Louis D.</a> (développeur)</li>
 </ul>
 
-_<a href="./senot.md">Ressources destinées a Mr Senot</a>_
+_<a href="./senot.md">Ressources destinées a Mr Senot (fichier senot.md)</a>_
 
 La première page à ouvrir est la <a href="./index.html">page d'accueil</a>.
 
